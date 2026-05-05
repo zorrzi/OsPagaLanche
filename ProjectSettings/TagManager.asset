@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Ground
+  - Grass
+  - Chest
+  - Pointer
+  - Willow
+  - Box
+  - Tree
+  - FoodItem
+  - Ladder
+  - Bush
+  - Key
+  - Enemy
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Ground
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1426510729
+    locked: 0
+  - name: Midground
+    uniqueID: 151006923
+    locked: 0
+  - name: Foreground
+    uniqueID: 54229797
+    locked: 0
+  - name: Characters
+    uniqueID: 2583441115
+    locked: 0
+  - name: Projectiles
+    uniqueID: 3645783973
+    locked: 0
+  m_RenderingLayers:
+  - Default

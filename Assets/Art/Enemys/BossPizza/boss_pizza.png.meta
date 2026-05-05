@@ -1,0 +1,1135 @@
+fileFormatVersion: 2
+guid: 985693e058bef3045a4480518c03c505
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3096957170148146244
+    second: boss_pizza_0
+  - first:
+      213: 2999731765019864961
+    second: boss_pizza_1
+  - first:
+      213: 8510758965324831107
+    second: boss_pizza_2
+  - first:
+      213: 4821931828574122570
+    second: boss_pizza_3
+  - first:
+      213: 4407395913367551959
+    second: boss_pizza_4
+  - first:
+      213: 3125407781819355093
+    second: boss_pizza_5
+  - first:
+      213: 5245099502159763754
+    second: boss_pizza_6
+  - first:
+      213: -6900922986611573877
+    second: boss_pizza_7
+  - first:
+      213: -139742205149103731
+    second: boss_pizza_8
+  - first:
+      213: -1321652250757037790
+    second: boss_pizza_9
+  - first:
+      213: 1491013802583867185
+    second: boss_pizza_10
+  - first:
+      213: 4648858518306207750
+    second: boss_pizza_11
+  - first:
+      213: -635988988652503709
+    second: boss_pizza_12
+  - first:
+      213: -2612156002234800658
+    second: boss_pizza_13
+  - first:
+      213: -4905801537093732913
+    second: boss_pizza_14
+  - first:
+      213: 4833801663819913973
+    second: boss_pizza_15
+  - first:
+      213: -87444269643071182
+    second: boss_pizza_16
+  - first:
+      213: 2527696223983212104
+    second: boss_pizza_17
+  - first:
+      213: -7077569766855656036
+    second: boss_pizza_18
+  - first:
+      213: -1620334999091108244
+    second: boss_pizza_19
+  - first:
+      213: -673199303487534592
+    second: boss_pizza_20
+  - first:
+      213: -4060680884065962017
+    second: boss_pizza_21
+  - first:
+      213: 100971285126495877
+    second: boss_pizza_22
+  - first:
+      213: -1954562036098513981
+    second: boss_pizza_23
+  - first:
+      213: -7960874839752801427
+    second: boss_pizza_24
+  - first:
+      213: 197961632846929971
+    second: boss_pizza_25
+  - first:
+      213: 4646224966900974395
+    second: boss_pizza_26
+  - first:
+      213: -7057507857171794254
+    second: boss_pizza_27
+  - first:
+      213: 2451082264432339690
+    second: boss_pizza_28
+  - first:
+      213: -6847425927466053625
+    second: boss_pizza_29
+  - first:
+      213: 2366988849470602534
+    second: boss_pizza_30
+  - first:
+      213: -4325246189461249377
+    second: boss_pizza_31
+  - first:
+      213: -7072638064434433857
+    second: boss_pizza_32
+  - first:
+      213: 6720809750930716035
+    second: boss_pizza_33
+  - first:
+      213: 8921099067149249737
+    second: boss_pizza_34
+  - first:
+      213: 8079421634140225085
+    second: boss_pizza_35
+  - first:
+      213: 2370838523057820663
+    second: boss_pizza_36
+  - first:
+      213: 555896544277368469
+    second: boss_pizza_37
+  - first:
+      213: 5887321358655533835
+    second: boss_pizza_38
+  - first:
+      213: -6002337815729254728
+    second: boss_pizza_39
+  - first:
+      213: -766191332123267394
+    second: boss_pizza_40
+  - first:
+      213: -1001040602714294028
+    second: boss_pizza_41
+  - first:
+      213: 4251357021993065717
+    second: boss_pizza_42
+  - first:
+      213: -3937032773857946042
+    second: boss_pizza_43
+  - first:
+      213: 8709465405382510787
+    second: boss_pizza_44
+  - first:
+      213: 4646127608415610397
+    second: boss_pizza_45
+  - first:
+      213: 2166635583354968597
+    second: boss_pizza_46
+  - first:
+      213: 1433155959451963015
+    second: boss_pizza_47
+  - first:
+      213: -6193524969398718786
+    second: boss_pizza_48
+  - first:
+      213: 148493821087218999
+    second: boss_pizza_49
+  - first:
+      213: -8311571767569957928
+    second: boss_pizza_50
+  - first:
+      213: -7617471216616441464
+    second: boss_pizza_51
+  - first:
+      213: 7751502554009788943
+    second: boss_pizza_52
+  - first:
+      213: -4464912676307044269
+    second: boss_pizza_53
+  - first:
+      213: 6730680798879056119
+    second: boss_pizza_54
+  - first:
+      213: -9097470610474029085
+    second: boss_pizza_55
+  - first:
+      213: 1665637267856566604
+    second: boss_pizza_56
+  - first:
+      213: -3238652981647830921
+    second: boss_pizza_57
+  - first:
+      213: -2177640715908897772
+    second: boss_pizza_58
+  - first:
+      213: 6827316827795262089
+    second: boss_pizza_59
+  - first:
+      213: -6849147410977611499
+    second: boss_pizza_60
+  - first:
+      213: -5686409223364597742
+    second: boss_pizza_61
+  - first:
+      213: 4699109924384843156
+    second: boss_pizza_62
+  - first:
+      213: -750767777676801761
+    second: boss_pizza_63
+  - first:
+      213: 8031213942996640803
+    second: boss_pizza_64
+  - first:
+      213: 7539966774211151446
+    second: boss_pizza_65
+  - first:
+      213: 4023645134700558675
+    second: boss_pizza_66
+  - first:
+      213: 711548651011072789
+    second: boss_pizza_67
+  - first:
+      213: -8728312409204613784
+    second: boss_pizza_68
+  - first:
+      213: -5789299638255208146
+    second: boss_pizza_69
+  - first:
+      213: -2994833161234340721
+    second: boss_pizza_70
+  - first:
+      213: 6028047204665158641
+    second: boss_pizza_71
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_pizza_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 337
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44c774b432a9afa20800000000000000
+      internalID: 3096957170148146244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_1
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 337
+        width: 67
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18fe673a52031a920800000000000000
+      internalID: 2999731765019864961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 337
+        width: 65
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3895821ef2a4c1670800000000000000
+      internalID: 8510758965324831107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_3
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 337
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a427f4d4371fae240800000000000000
+      internalID: 4821931828574122570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 268
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dff7c85b373a2d30800000000000000
+      internalID: 4407395913367551959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_5
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 268
+        width: 61
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df859581ddaf5b20800000000000000
+      internalID: 3125407781819355093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_6
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 268
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a299fcd15365ac840800000000000000
+      internalID: 5245099502159763754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_7
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 268
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b70b83b1ffa30a0800000000000000
+      internalID: -6900922986611573877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_8
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 268
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8935fd64398f0ef0800000000000000
+      internalID: -139742205149103731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_9
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 268
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2210805c74c88ade0800000000000000
+      internalID: -1321652250757037790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_10
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 268
+        width: 59
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f373a572521b410800000000000000
+      internalID: 1491013802583867185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_11
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 200
+        width: 54
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608b0b21130148040800000000000000
+      internalID: 4648858518306207750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_12
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 200
+        width: 72
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36dbe4a62638c27f0800000000000000
+      internalID: -635988988652503709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_13
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 200
+        width: 72
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee5e3eca4f1cfbbd0800000000000000
+      internalID: -2612156002234800658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_14
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 200
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc576fa7e771bebb0800000000000000
+      internalID: -4905801537093732913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_15
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 224
+        width: 32
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa9daea00d151340800000000000000
+      internalID: 4833801663819913973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_16
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 133
+        width: 71
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 231084a66e559cef0800000000000000
+      internalID: -87444269643071182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_17
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 133
+        width: 71
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8469d9ac25e241320800000000000000
+      internalID: 2527696223983212104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_18
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 133
+        width: 72
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d368dabcb67cd90800000000000000
+      internalID: -7077569766855656036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_19
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 135
+        width: 88
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66aa0a37e96389e0800000000000000
+      internalID: -1620334999091108244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_20
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 137
+        width: 93
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00ac59cdcc058a6f0800000000000000
+      internalID: -673199303487534592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_21
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 135
+        width: 85
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd77707104095a7c0800000000000000
+      internalID: -4060680884065962017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_22
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 0
+        width: 73
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58eba7e49d8b66100800000000000000
+      internalID: 100971285126495877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_23
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0
+        width: 66
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c342e21f2000e4e0800000000000000
+      internalID: -1954562036098513981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_34
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 133
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ccef77e55c1ecb70800000000000000
+      internalID: 8921099067149249737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_36
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 63
+        width: 67
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f35ca25319e6e020800000000000000
+      internalID: 2370838523057820663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_37
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 66
+        width: 54
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e058536f0f6b700800000000000000
+      internalID: 555896544277368469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_38
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 63
+        width: 56
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03bb355597f3b150800000000000000
+      internalID: 5887321358655533835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_39
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 67
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8be409fee8963bca0800000000000000
+      internalID: -6002337815729254728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_40
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 0
+        width: 71
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebe2fcafa01fd55f0800000000000000
+      internalID: -766191332123267394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_41
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 0
+        width: 75
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f8b87520e69b12f0800000000000000
+      internalID: -1001040602714294028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_pizza_42
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 0
+        width: 82
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc5245dfaadffa30800000000000000
+      internalID: 4251357021993065717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a3e27071984362446b5aa8abe10d46ea
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      boss_pizza_0: 3096957170148146244
+      boss_pizza_1: 2999731765019864961
+      boss_pizza_10: 1491013802583867185
+      boss_pizza_11: 4648858518306207750
+      boss_pizza_12: -635988988652503709
+      boss_pizza_13: -2612156002234800658
+      boss_pizza_14: -4905801537093732913
+      boss_pizza_15: 4833801663819913973
+      boss_pizza_16: -87444269643071182
+      boss_pizza_17: 2527696223983212104
+      boss_pizza_18: -7077569766855656036
+      boss_pizza_19: -1620334999091108244
+      boss_pizza_2: 8510758965324831107
+      boss_pizza_20: -673199303487534592
+      boss_pizza_21: -4060680884065962017
+      boss_pizza_22: 100971285126495877
+      boss_pizza_23: -1954562036098513981
+      boss_pizza_24: -7960874839752801427
+      boss_pizza_25: 197961632846929971
+      boss_pizza_26: 4646224966900974395
+      boss_pizza_27: -7057507857171794254
+      boss_pizza_28: 2451082264432339690
+      boss_pizza_29: -6847425927466053625
+      boss_pizza_3: 4821931828574122570
+      boss_pizza_30: 2366988849470602534
+      boss_pizza_31: -4325246189461249377
+      boss_pizza_32: -7072638064434433857
+      boss_pizza_33: 6720809750930716035
+      boss_pizza_34: 8921099067149249737
+      boss_pizza_35: 8079421634140225085
+      boss_pizza_36: 2370838523057820663
+      boss_pizza_37: 555896544277368469
+      boss_pizza_38: 5887321358655533835
+      boss_pizza_39: -6002337815729254728
+      boss_pizza_4: 4407395913367551959
+      boss_pizza_40: -766191332123267394
+      boss_pizza_41: -1001040602714294028
+      boss_pizza_42: 4251357021993065717
+      boss_pizza_43: -3937032773857946042
+      boss_pizza_44: 8709465405382510787
+      boss_pizza_45: 4646127608415610397
+      boss_pizza_46: 2166635583354968597
+      boss_pizza_47: 1433155959451963015
+      boss_pizza_48: -6193524969398718786
+      boss_pizza_49: 148493821087218999
+      boss_pizza_5: 3125407781819355093
+      boss_pizza_50: -8311571767569957928
+      boss_pizza_51: -7617471216616441464
+      boss_pizza_52: 7751502554009788943
+      boss_pizza_53: -4464912676307044269
+      boss_pizza_54: 6730680798879056119
+      boss_pizza_55: -9097470610474029085
+      boss_pizza_56: 1665637267856566604
+      boss_pizza_57: -3238652981647830921
+      boss_pizza_58: -2177640715908897772
+      boss_pizza_59: 6827316827795262089
+      boss_pizza_6: 5245099502159763754
+      boss_pizza_60: -6849147410977611499
+      boss_pizza_61: -5686409223364597742
+      boss_pizza_62: 4699109924384843156
+      boss_pizza_63: -750767777676801761
+      boss_pizza_64: 8031213942996640803
+      boss_pizza_65: 7539966774211151446
+      boss_pizza_66: 4023645134700558675
+      boss_pizza_67: 711548651011072789
+      boss_pizza_68: -8728312409204613784
+      boss_pizza_69: -5789299638255208146
+      boss_pizza_7: -6900922986611573877
+      boss_pizza_70: -2994833161234340721
+      boss_pizza_71: 6028047204665158641
+      boss_pizza_8: -139742205149103731
+      boss_pizza_9: -1321652250757037790
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
