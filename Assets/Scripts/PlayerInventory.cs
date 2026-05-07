@@ -9,6 +9,24 @@ public class PlayerInventory : MonoBehaviour
 
     private List<GameObject> keyIcons = new List<GameObject>();
 
+    void Start()
+    {
+        // Busca o KeysContainer dinamicamente se não tiver referência
+        if (keysContainer == null)
+        {
+            GameObject foundContainer = GameObject.Find("KeysContainer");
+            if (foundContainer != null)
+            {
+                keysContainer = foundContainer.transform;
+                Debug.Log("KeysContainer encontrado dinamicamente");
+            }
+            else
+            {
+                Debug.LogWarning("KeysContainer não encontrado na cena!");
+            }
+        }
+    }
+
     public void AddKey()
     {
         keys++;
@@ -31,7 +49,20 @@ public class PlayerInventory : MonoBehaviour
 
     void AddKeyIcon()
     {
+        if (keyIconPrefab == null)
+        {
+            Debug.LogWarning("keyIconPrefab é NULL!");
+            return;
+        }
+
+        if (keysContainer == null)
+        {
+            Debug.LogWarning("keysContainer é NULL na hora de adicionar ícone!");
+            return;
+        }
+
         GameObject icon = Instantiate(keyIconPrefab, keysContainer);
+        icon.transform.localScale = Vector3.one;
         keyIcons.Add(icon);
     }
 
