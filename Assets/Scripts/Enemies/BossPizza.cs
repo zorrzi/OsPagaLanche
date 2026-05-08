@@ -74,11 +74,6 @@ public class BossPizza : MonoBehaviour
                 return; // sem player ainda, não faz nada nesse frame
         }
 
-        // TESTE - remover depois
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            healthSystem.TakeDamage(1);
-        }
 
         float dist = Vector2.Distance(transform.position, player.position);
         attack1Timer -= Time.deltaTime;
