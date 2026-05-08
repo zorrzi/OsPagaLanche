@@ -15,16 +15,19 @@ public class BossFoodTruck : MonoBehaviour
     public float attackRange = 5f;
     public float detectionRange = 12f;
 
+    [Header("Intervalo entre ataques")]
+    public float attackDelay = 2f; // pausa obrigatória entre qualquer ataque
+
     [Header("Attack 1 – Tomate")]
-    public GameObject tomatoPrefab;         // projétil de tomate
-    public Transform tomatoFirePoint;      // ponto de spawn do tomate
+    public GameObject tomatoPrefab;
+    public Transform tomatoFirePoint;
     public float attack1Cooldown = 2.5f;
 
     [Header("Attack 2 – Fumaça")]
-    public GameObject smokePuffPrefab;      // projétil/área de fumaça
-    public Transform smokeFirePoint;       // saída do escapamento
+    public GameObject smokePuffPrefab;
+    public Transform smokeFirePoint;
     public float attack2Cooldown = 6f;
-    public int smokePuffCount = 4;  // quantas bolinhas de fumaça
+    public int smokePuffCount = 1;
     public float smokeSpreadAngle = 30f;
 
     [Header("Fase 2 – Cooldowns reduzidos")]
@@ -43,11 +46,11 @@ public class BossFoodTruck : MonoBehaviour
     private bool isPhase2 = false;
     private float attack1Timer = 0f;
     private float attack2Timer = 0f;
+    private float attackDelayTimer = 0f; // timer do intervalo entre ataques
     private float currentSpeed;
     private Vector3 baseScale;
     private float facingDir = 1f;
 
-    // Animator hashes (evita GC de string lookup)
     private static readonly int HASH_WALK = Animator.StringToHash("isWalking");
     private static readonly int HASH_ATK1 = Animator.StringToHash("isAttack1");
     private static readonly int HASH_ATK2 = Animator.StringToHash("isAttack2");
@@ -83,7 +86,6 @@ public class BossFoodTruck : MonoBehaviour
     {
         if (healthSystem.IsDead) return;
 
-        // Lazy player lookup
         if (player == null)
         {
             var obj = GameObject.FindGameObjectWithTag("Player");
@@ -97,6 +99,7 @@ public class BossFoodTruck : MonoBehaviour
         float dist = Vector2.Distance(transform.position, player.position);
         attack1Timer -= Time.deltaTime;
         attack2Timer -= Time.deltaTime;
+        attackDelayTimer -= Time.deltaTime;
 
         FlipToPlayer();
 
@@ -157,34 +160,41 @@ public class BossFoodTruck : MonoBehaviour
 
     void TryAttack()
     {
-        // Fase 2: prioriza ataque 2 (fumaça) se disponível
-        if (isPhase2 && attack2Timer <= 0f)
+        // Aguarda o intervalo obrigatório entre ataques
+        if (attackDelayTimer > 0f) return;
+
+        if (attack1Timer <= 0f && attack2Timer <= 0f)
         {
-            DoAttack2();
-            return;
+            // 20% fumaça, 80% tomate
+            if (Random.value < 0.2f)
+                DoAttack2();
+            else
+                DoAttack1();
         }
-        if (attack1Timer <= 0f)
+        else if (attack1Timer <= 0f)
         {
             DoAttack1();
         }
+        else if (attack2Timer <= 0f)
+        {
+            DoAttack2();
+        }
     }
 
-    /// <summary>Attack 1 – Arremessa tomate em direção ao player.</summary>
     void DoAttack1()
     {
         anim.SetTrigger(HASH_ATK1);
         attack1Timer = attack1Cooldown;
-        // Delay para sincronizar com o frame de arremesso da animação
+        attackDelayTimer = attackDelay; // reinicia o intervalo
         Invoke(nameof(SpawnTomato), 0.35f);
     }
 
-    /// <summary>Attack 2 – Cospe fumaça em leque (somente Fase 2).</summary>
     void DoAttack2()
     {
         anim.SetTrigger(HASH_ATK2);
         attack2Timer = attack2Cooldown;
-        // Animação tem "carga" mais longa, delay maior
-        Invoke(nameof(SpawnSmoke), 0.6f);
+        attackDelayTimer = attackDelay; // reinicia o intervalo
+        Invoke(nameof(SpawnSmoke), 1.3f);
     }
 
     // ─────────────────────────────────────────
@@ -256,13 +266,9 @@ public class BossFoodTruck : MonoBehaviour
     }
 
     // ─────────────────────────────────────────
-    //  ANIMATION EVENTS (opcional, mais preciso)
+    //  ANIMATION EVENTS
     // ─────────────────────────────────────────
 
-    /// <summary>
-    /// Alternativa ao Invoke: adicione um Animation Event no frame exato
-    /// do arremesso/cuspida e chame estes métodos diretamente.
-    /// </summary>
     public void AnimEvent_SpawnTomato() => SpawnTomato();
     public void AnimEvent_SpawnSmoke() => SpawnSmoke();
 }

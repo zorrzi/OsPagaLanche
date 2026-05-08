@@ -5,6 +5,18 @@ TextureImporter:
   - first:
       213: 8263582279829239828
     second: Death_2_0
+  - first:
+      213: -113260722713229190
+    second: Death_2_1
+  - first:
+      213: -6549966743457141925
+    second: Death_2_2
+  - first:
+      213: -3452864994668108209
+    second: Death_2_3
+  - first:
+      213: 3545563983595186850
+    second: Death_2_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +49,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +58,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +87,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -132,7 +144,7 @@ TextureImporter:
         x: 0
         y: 0
         width: 129
-        height: 105
+        height: 93
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,11 +159,99 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Death_2_1
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 93
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a788ca709fd9d6ef0800000000000000
+      internalID: -113260722713229190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_2_2
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 57
+        width: 45
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b6d9533f7d915a0800000000000000
+      internalID: -6549966743457141925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_2_3
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 92
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f462d67d495f410d0800000000000000
+      internalID: -3452864994668108209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_2_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa2c9a68af543130800000000000000
+      internalID: 3545563983595186850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -162,6 +262,10 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       Death_2_0: 8263582279829239828
+      Death_2_1: -113260722713229190
+      Death_2_2: -6549966743457141925
+      Death_2_3: -3452864994668108209
+      Death_2_4: 3545563983595186850
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
