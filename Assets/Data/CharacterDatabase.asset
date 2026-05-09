@@ -18,17 +18,26 @@ MonoBehaviour:
     portrait: {fileID: 8662542637145137698, guid: ae68406257eec2e479380f36ac506e5e, type: 3}
     animatorController: {fileID: 9100000, guid: 23a34bfc2ea8d3546b47376e5fd2e0ab, type: 2}
     isAvailable: 1
-    selectionVoices: []
+    selectionVoices:
+    - {fileID: 8300000, guid: 38127e02f5c6f1948807989c51a85359, type: 3}
+    - {fileID: 8300000, guid: 199a2bb9b81029940aace2d8fc778237, type: 3}
+    - {fileID: 8300000, guid: af78829308948c24dbd51930a222cff8, type: 3}
   - characterName: Zorzi
     portrait: {fileID: -7667096289242414654, guid: 6d671980bbcbaef4693f8e4c8106f0c0, type: 3}
     animatorController: {fileID: 9100000, guid: e4c147df3eb51584da32ac2175e5eb91, type: 2}
     isAvailable: 1
-    selectionVoices: []
+    selectionVoices:
+    - {fileID: 8300000, guid: 48bf2dce10edf6f4f8b53d1d08eef204, type: 3}
+    - {fileID: 8300000, guid: 3b7b196ee90596d44a07aaa564d69e30, type: 3}
+    - {fileID: 8300000, guid: 8dd58a2575939c94bae6599b95e2c859, type: 3}
   - characterName: Felipe
     portrait: {fileID: 6741406254062412272, guid: b5403dfb34bfd83488b2ff4d683637b6, type: 3}
     animatorController: {fileID: 9100000, guid: 1b8795e87c6bf07448ce2db405e67ba8, type: 2}
     isAvailable: 1
-    selectionVoices: []
+    selectionVoices:
+    - {fileID: 8300000, guid: 196ff8bdf20f71e4887431ede083b78a, type: 3}
+    - {fileID: 8300000, guid: dec8119a2d753a348ac462094183420e, type: 3}
+    - {fileID: 8300000, guid: 103616c9e42ced044adcac088832ecb6, type: 3}
   - characterName: Leo
     portrait: {fileID: 2384990561435181830, guid: ac82dbe32c490074b9ae2af5a10b7f23, type: 3}
     animatorController: {fileID: 9100000, guid: 96f19bc2aa505914ea27f74ad6e86a85, type: 2}

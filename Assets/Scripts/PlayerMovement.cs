@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ataque Ranged")]
     public GameObject hamburgerPrefab;
     public Transform firePoint;
-    public KeyCode rangedKey = KeyCode.Q;
+    public KeyCode rangedKey = KeyCode.K;
     public float rangedCooldown = 0.6f;
 
     [Header("Ataque Melee")]
@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public int meleeDamage = 1;
     public float meleeCooldown = 0.5f;
     public LayerMask enemyLayer;
+    public KeyCode meleeKey = KeyCode.J;
 
     private float coyoteTimeCounter = 0f;
     private float rangedCooldownTimer = 0f;
@@ -98,17 +99,18 @@ public class PlayerMovement : MonoBehaviour
             movementVel.y = rb.linearVelocity.y;
         }
 
-        // ATAQUE MELEE
-        if (Input.GetMouseButtonDown(0) && meleeCooldownTimer <= 0f)
+        // ATAQUE MELEE (tecla J)
+        if (Input.GetKeyDown(meleeKey) && meleeCooldownTimer <= 0f)
         {
+            Debug.Log($"{meleeKey} apertado! Ataque melee iniciado");
             anim.SetTrigger("AttackMelee");
             meleeCooldownTimer = meleeCooldown;
         }
 
-        // ATAQUE RANGED
+        // ATAQUE RANGED (tecla K)
         if (Input.GetKeyDown(rangedKey) && rangedCooldownTimer <= 0f)
         {
-            Debug.Log("Q apertado! isGrounded: " + isGrounded);
+            Debug.Log($"{rangedKey} apertado! Ataque ranged iniciado");
             anim.SetTrigger("AttackRanged");
             rangedCooldownTimer = rangedCooldown;
         }
