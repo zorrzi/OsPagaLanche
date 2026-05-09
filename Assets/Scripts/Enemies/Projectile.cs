@@ -30,7 +30,7 @@ public class Projectile : MonoBehaviour
             direction = Vector2.Lerp(direction, (playerRef.position - transform.position).normalized, 5f * Time.deltaTime);
 
         transform.Translate(direction * speed * Time.deltaTime);
-    }
+    }   
 
     void OnTriggerEnter2D(Collider2D col)
     {
