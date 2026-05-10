@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator anim;
     private bool isGrounded = false;
+    private bool wasGrounded = false; // pra detectar pouso
     private bool isOnLadder = false;
     private bool jumpRequested = false;
     private Vector2 movementVel;
@@ -53,7 +54,14 @@ public class PlayerMovement : MonoBehaviour
             groundCheckDistance,
             groundLayer
         );
+        wasGrounded = isGrounded;
         isGrounded = hit.collider != null && hit.collider.CompareTag("Ground");
+
+        // Detecta pouso (estava no ar, agora está no chão)
+        if (isGrounded && !wasGrounded)
+        {
+            SFXManager.Instance?.Play("land");
+        }
 
         if (isGrounded)
             coyoteTimeCounter = coyoteTime;
@@ -70,19 +78,17 @@ public class PlayerMovement : MonoBehaviour
         float moveInput = Input.GetAxisRaw("Horizontal");
         movementVel.x = moveInput * speed;
 
-        // FLIP
         if (moveInput != 0)
             transform.localScale = new Vector3(Mathf.Sign(moveInput), 1, 1);
 
-        // ANIMACOES
-        anim.SetFloat("Speed", Mathf.Abs(moveInput));
+        anim.SetFloat("Speed", isOnLadder ? 0f : Mathf.Abs(moveInput));
         anim.SetBool("IsJumping", !isGrounded && !isOnLadder);
         anim.SetBool("IsClimbing", isOnLadder);
 
         // PULO
         if (Input.GetKeyDown(KeyCode.Space) && (coyoteTimeCounter > 0f || isOnLadder))
         {
-            Debug.Log("Pulo registrado! isGrounded: " + isGrounded);
+            SFXManager.Instance?.Play("jump");
             jumpRequested = true;
             coyoteTimeCounter = 0f;
             isOnLadder = false;
@@ -99,18 +105,18 @@ public class PlayerMovement : MonoBehaviour
             movementVel.y = rb.linearVelocity.y;
         }
 
-        // ATAQUE MELEE (tecla J)
+        // ATAQUE MELEE
         if (Input.GetKeyDown(meleeKey) && meleeCooldownTimer <= 0f)
         {
-            Debug.Log($"{meleeKey} apertado! Ataque melee iniciado");
+            SFXManager.Instance?.Play("attack_melee");
             anim.SetTrigger("AttackMelee");
             meleeCooldownTimer = meleeCooldown;
         }
 
-        // ATAQUE RANGED (tecla K)
+        // ATAQUE RANGED
         if (Input.GetKeyDown(rangedKey) && rangedCooldownTimer <= 0f)
         {
-            Debug.Log($"{rangedKey} apertado! Ataque ranged iniciado");
+            SFXManager.Instance?.Play("attack_ranged");
             anim.SetTrigger("AttackRanged");
             rangedCooldownTimer = rangedCooldown;
         }
@@ -128,7 +134,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Chamado por Animation Event no frame de disparo da animação AttackRanged
     public void Shoot()
     {
         if (hamburgerPrefab == null || firePoint == null) return;
@@ -140,7 +145,6 @@ public class PlayerMovement : MonoBehaviour
         if (p != null) p.direction = dir;
     }
 
-    // Chamado por Animation Event no frame de impacto da animação AttackMelee
     public void MeleeAttack()
     {
         if (meleePoint == null) return;
@@ -155,13 +159,12 @@ public class PlayerMovement : MonoBehaviour
                 if (enemy != null && !enemy.IsDead)
                 {
                     enemy.TakeDamage(meleeDamage);
-                    Debug.Log($"Melee acertou: {hit.name}");
+                    SFXManager.Instance?.Play("hit_enemy");
                 }
             }
         }
     }
 
-    // Detecta enquanto está dentro do trigger da escada (a cada frame)
     void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Ladder"))
@@ -174,7 +177,6 @@ public class PlayerMovement : MonoBehaviour
             isOnLadder = false;
     }
 
-    // Desenha a área de ataque melee no Editor pra facilitar o ajuste visual
     void OnDrawGizmosSelected()
     {
         if (meleePoint == null) return;

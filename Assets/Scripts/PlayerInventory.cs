@@ -11,7 +11,6 @@ public class PlayerInventory : MonoBehaviour
 
     void Start()
     {
-        // Busca o KeysContainer dinamicamente se não tiver referência
         if (keysContainer == null)
         {
             GameObject foundContainer = GameObject.Find("KeysContainer");
@@ -31,6 +30,9 @@ public class PlayerInventory : MonoBehaviour
     {
         keys++;
         Debug.Log("Chave coletada! Total: " + keys);
+
+        SFXManager.Instance?.Play("key_pickup");
+
         AddKeyIcon();
     }
 
@@ -54,7 +56,6 @@ public class PlayerInventory : MonoBehaviour
             Debug.LogWarning("keyIconPrefab é NULL!");
             return;
         }
-
         if (keysContainer == null)
         {
             Debug.LogWarning("keysContainer é NULL na hora de adicionar ícone!");

@@ -200,6 +200,8 @@ MonoBehaviour:
   heart3: {fileID: 0}
   heartFull: {fileID: 110063094613122208, guid: 4498ebe0994b5f642bf0c166464df7e3, type: 3}
   heartEmpty: {fileID: 1342954271244971394, guid: 489d0c54ba3c1e14daab3e543a1228dd, type: 3}
+  fallDeathY: -40
+  respawnDelay: 2
 --- !u!114 &526139112427566194
 MonoBehaviour:
   m_ObjectHideFlags: 0

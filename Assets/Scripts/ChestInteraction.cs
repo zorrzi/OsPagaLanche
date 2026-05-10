@@ -29,6 +29,9 @@ public class ChestInteraction : MonoBehaviour
             isOpen = true;
             animator.SetBool("IsOpen", true);
             Debug.Log("Baú aberto com a chave!");
+
+            // Som de abrir baú
+            SFXManager.Instance?.Play("chest_open");
         }
         else
         {
