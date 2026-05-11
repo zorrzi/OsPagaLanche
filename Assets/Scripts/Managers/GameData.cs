@@ -10,12 +10,12 @@ public class GameData : MonoBehaviour
 
     [Header("Tempo")]
     public float lastLevelTime = 0f;
-    public float totalGameTime = 0f; // soma de todas as fases
+    public float accumulatedTime = 0f; // ? NOVO: tempo total acumulado entre fases
 
     [Header("Estado entre fases")]
     public int currentLives = 3;
     public int currentKeys = 0;
-    public bool hasGameStarted = false; // pra saber se acabou de começar (vidas cheias)
+    public bool hasGameStarted = false;
 
     void Awake()
     {
@@ -42,25 +42,26 @@ public class GameData : MonoBehaviour
     }
 
     /// <summary>
-    /// Reseta tudo pra começar um novo jogo (chamado no início, na MainMenu/CharacterSelect)
+    /// Reseta tudo pra começar um novo jogo (chamado na CharacterSelect)
     /// </summary>
     public void ResetGameProgress()
     {
         currentLives = 3;
         currentKeys = 0;
-        totalGameTime = 0f;
+        accumulatedTime = 0f;
         lastLevelTime = 0f;
         hasGameStarted = true;
         Debug.Log("Progresso do jogo resetado");
     }
 
     /// <summary>
-    /// Salva estado atual antes de mudar de fase
+    /// Salva estado atual antes de mudar de fase ou de morrer.
     /// </summary>
-    public void SaveStateBeforeLevelChange(int lives, int keys)
+    public void SaveStateBeforeLevelChange(int lives, int keys, float currentTime)
     {
         currentLives = lives;
         currentKeys = keys;
-        Debug.Log($"Estado salvo: {lives} vidas, {keys} chaves");
+        accumulatedTime = currentTime;
+        Debug.Log($"Estado salvo: {lives} vidas, {keys} chaves, tempo {currentTime:F2}s");
     }
 }
