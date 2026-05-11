@@ -37,9 +37,42 @@ public class FlagTrigger : MonoBehaviour
         triggered = true;
         Debug.Log("Bandeira tocada! Completando fase...");
 
+        // Congela o player
+        FreezePlayer(other.gameObject);
+
         if (LevelManager.Instance != null)
             LevelManager.Instance.CompleteLevel();
         else
             Debug.LogWarning("LevelManager não encontrado na cena!");
+    }
+
+    /// <summary>
+    /// Para o player de se mover e impede que caia até a próxima fase carregar.
+    /// </summary>
+    void FreezePlayer(GameObject player)
+    {
+        // Desabilita o PlayerMovement (controles e movimento)
+        PlayerMovement movement = player.GetComponent<PlayerMovement>();
+        if (movement != null)
+            movement.enabled = false;
+
+        // Para a física (zera velocidade e congela)
+        Rigidbody2D rb = player.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.bodyType = RigidbodyType2D.Kinematic; // sem gravidade nem colisões dinâmicas
+        }
+
+        // Para a animação no IdleSide (se quiser deixar parado, não em loop de corrida)
+        Animator anim = player.GetComponent<Animator>();
+        if (anim != null)
+        {
+            anim.SetFloat("Speed", 0f);
+            anim.SetBool("IsJumping", false);
+            anim.SetBool("IsClimbing", false);
+        }
+
+        Debug.Log("Player congelado.");
     }
 }
