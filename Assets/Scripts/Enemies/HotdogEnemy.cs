@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(EnemyHealth))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class HotdogEnemy : MonoBehaviour
 {
     [Header("Configurações")]
@@ -15,6 +16,7 @@ public class HotdogEnemy : MonoBehaviour
     private Animator anim;
     private Transform player;
     private EnemyHealth healthSystem;
+    private Rigidbody2D rb;
     private float attackTimer = 0f;
     private float attackCooldown = 1.5f;
     private Vector3 baseScale;
@@ -24,6 +26,7 @@ public class HotdogEnemy : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         healthSystem = GetComponent<EnemyHealth>();
+        rb = GetComponent<Rigidbody2D>();
         baseScale = transform.localScale;
     }
 
@@ -51,6 +54,7 @@ public class HotdogEnemy : MonoBehaviour
         if (dist <= attackRange)
         {
             anim.SetBool("isWalking", false);
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
             if (attackTimer <= 0f)
             {
                 anim.SetTrigger("isAttacking");
@@ -61,11 +65,13 @@ public class HotdogEnemy : MonoBehaviour
         else if (dist <= detectionRange)
         {
             anim.SetBool("isWalking", true);
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
+            float direction = player.position.x > transform.position.x ? 1f : -1f;
+            rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
         }
         else
         {
             anim.SetBool("isWalking", false);
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         }
     }
 

@@ -1,20 +1,24 @@
 using UnityEngine;
 
 [RequireComponent(typeof(EnemyHealth))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class BurguerEnemy : MonoBehaviour
 {
-    [Header("Configurações")]
+    [Header("Configuraï¿½ï¿½es")]
     public float speed = 2f;
     public float attackRange = 3f;
     public float detectionRange = 6f;
 
-    [Header("Projétil")]
+    [Header("Projï¿½til")]
     public GameObject projectilePrefab;
     public Transform firePoint;
 
     private Animator anim;
     private Transform player;
     private EnemyHealth healthSystem;
+    private Rigidbody2D rb;
+    private Vector3 baseScale;
+    private float facingDirection = 1f;
     private float attackTimer = 0f;
     private float attackCooldown = 2f;
 
@@ -22,20 +26,22 @@ public class BurguerEnemy : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         healthSystem = GetComponent<EnemyHealth>();
+        rb = GetComponent<Rigidbody2D>();
+        baseScale = transform.localScale;
     }
 
     void Update()
     {
         if (healthSystem.IsDead) return;
 
-        // Busca o player se ainda não foi encontrado (lazy lookup)
+        // Busca o player se ainda nï¿½o foi encontrado (lazy lookup)
         if (player == null)
         {
             GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
             if (playerObj != null)
                 player = playerObj.transform;
             else
-                return; // sem player ainda, espera o próximo frame
+                return; // sem player ainda, espera o prï¿½ximo frame
         }
 
         float dist = Vector2.Distance(transform.position, player.position);
@@ -44,6 +50,7 @@ public class BurguerEnemy : MonoBehaviour
         if (dist <= attackRange)
         {
             anim.SetBool("isWalking", false);
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
             if (attackTimer <= 0f)
             {
                 anim.SetTrigger("isAttacking");
@@ -54,16 +61,20 @@ public class BurguerEnemy : MonoBehaviour
         else if (dist <= detectionRange)
         {
             anim.SetBool("isWalking", true);
-            Vector2 dir = (player.position - transform.position).normalized;
-            transform.position = Vector2.MoveTowards(transform.position, player.position, speed * Time.deltaTime);
-            if (dir.x < 0)
-                transform.localScale = new Vector3(-0.5f, 0.5f, 1);
-            else
-                transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            float direction = player.position.x > transform.position.x ? 1f : -1f;
+            rb.linearVelocity = new Vector2(direction * speed, rb.linearVelocity.y);
+
+            facingDirection = direction;
+            transform.localScale = new Vector3(
+                facingDirection * Mathf.Abs(baseScale.x),
+                baseScale.y,
+                baseScale.z
+            );
         }
         else
         {
             anim.SetBool("isWalking", false);
+            rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
         }
     }
 
