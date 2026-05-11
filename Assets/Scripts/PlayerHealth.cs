@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -15,21 +17,26 @@ public class PlayerHealth : MonoBehaviour
     public Sprite heartFull;
     public Sprite heartEmpty;
 
+    [Header("Morte e Respawn")]
+    [Tooltip("Y mínimo da fase. Abaixo disso, player morre (caiu do mapa)")]
+    public float fallDeathY = -20f;
+    [Tooltip("Tempo até reiniciar a cena depois de morrer")]
+    public float respawnDelay = 2f;
+
     private Animator anim1;
     private Animator anim2;
     private Animator anim3;
+    private bool isDead = false;
 
     void Start()
     {
-        // Se as referências estiverem vazias, busca dinamicamente no Canvas
         if (heart1 == null) heart1 = FindHeart("Heart1");
         if (heart2 == null) heart2 = FindHeart("Heart2");
         if (heart3 == null) heart3 = FindHeart("Heart3");
 
-        // Se algum coração ainda for null, avisa mas não quebra
         if (heart1 == null || heart2 == null || heart3 == null)
         {
-            Debug.LogWarning(" Algum coração da UI não foi encontrado! Verifique os nomes (Heart1, Heart2, Heart3) no Canvas.");
+            Debug.LogWarning("Algum coração da UI não foi encontrado!");
             return;
         }
 
@@ -51,16 +58,33 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
+        if (isDead) return;
+
+        // Cheat de teste
         if (Input.GetKeyDown(KeyCode.H))
             TakeDamage();
+
+        // Detecta queda do mapa
+        if (transform.position.y < fallDeathY)
+        {
+            Debug.Log("Caiu do mapa!");
+            Die();
+        }
     }
 
     public void TakeDamage(int amount = 1)
     {
+        if (isDead) return;
         if (currentLives <= 0) return;
+
         currentLives -= amount;
         if (currentLives < 0) currentLives = 0;
+
         Debug.Log("Vida perdida! Vidas: " + currentLives);
+
+        if (currentLives > 0)
+            SFXManager.Instance?.Play("damage_taken");
+
         UpdateHeartsUI();
 
         if (PostFXEvents.Instance != null)
@@ -70,18 +94,61 @@ public class PlayerHealth : MonoBehaviour
         }
 
         if (currentLives <= 0)
-            Debug.Log("Game Over!");
+        {
+            Die();
+        }
     }
 
     public void AddLife()
     {
+        if (isDead) return;
         if (currentLives >= maxLives) return;
+
         currentLives++;
         Debug.Log("Vida recuperada! Vidas: " + currentLives);
+
+        SFXManager.Instance?.Play("heart_pickup");
+
         UpdateHeartsUI();
 
         if (PostFXEvents.Instance != null)
             PostFXEvents.Instance.SetLowHP(currentLives <= 1);
+    }
+
+    void Die()
+    {
+        if (isDead) return;
+        isDead = true;
+
+        Debug.Log("Game Over!");
+
+        // Toca som
+        SFXManager.Instance?.Play("game_over");
+
+        // Para o player de se mexer
+        PlayerMovement movement = GetComponent<PlayerMovement>();
+        if (movement != null) movement.enabled = false;
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+            rb.bodyType = RigidbodyType2D.Kinematic;
+        }
+
+        // Espera um pouco e reinicia a cena
+        StartCoroutine(RestartLevelAfterDelay());
+    }
+
+    IEnumerator RestartLevelAfterDelay()
+    {
+        yield return new WaitForSeconds(respawnDelay);
+
+        // Recarrega a cena Fase1 com fade
+        if (SceneFader.Instance != null)
+            SceneFader.Instance.LoadSceneWithFade("Fase1");
+        else
+            SceneManager.LoadScene("Fase1");
     }
 
     void UpdateHeartsUI()
@@ -113,6 +180,7 @@ public class PlayerHealth : MonoBehaviour
                 bool wasDisabled = !anim.enabled;
                 anim.enabled = true;
                 heart.sprite = heartFull;
+
                 if (wasDisabled)
                 {
                     var state = anim.GetCurrentAnimatorStateInfo(0);

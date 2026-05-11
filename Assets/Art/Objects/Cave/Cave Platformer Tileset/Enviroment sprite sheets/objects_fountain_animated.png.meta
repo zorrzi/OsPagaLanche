@@ -40,7 +40,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -68,7 +68,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 16
     mipBias: 0
     wrapU: 1
@@ -82,7 +82,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -157,199 +157,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fountain_0
+      name: objects_fountain_animated_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
+      spriteID: 64d950c06bc7aac49922a90da6056e78
+      internalID: 1653741991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fountain_1
+      name: objects_fountain_animated_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
+      spriteID: 2f68fe659eb13bf4f8788ad3c330f478
+      internalID: -1679592556
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fountain_2
+      name: objects_fountain_animated_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
+      spriteID: 9cd88647f092de84385e20d01ccb54a3
+      internalID: 809654652
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fountain_3
+      name: objects_fountain_animated_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
+      spriteID: a0d39d62f36cc1c4c87fc02024be5fbb
+      internalID: -610981805
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fountain_4
+      name: objects_fountain_animated_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 32
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 82305410000000000800000000000000
-      internalID: 21300008
+      spriteID: 5730b01b49eb96747ad385fcfa20390f
+      internalID: -1850790559
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fountain_5
+      name: objects_fountain_animated_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a2305410000000000800000000000000
-      internalID: 21300010
+      spriteID: 85868fbdac85db947b5a057f68e42336
+      internalID: 2110022815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fountain_6
+      name: objects_fountain_animated_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 32
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: c2305410000000000800000000000000
-      internalID: 21300012
+      spriteID: f40a0a95b51ea2f4fb0909e25a68883d
+      internalID: -1483906626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fountain_7
+      name: objects_fountain_animated_7
       rect:
         serializedVersion: 2
         x: 224
         y: 0
         width: 32
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e2305410000000000800000000000000
-      internalID: 21300014
+      spriteID: cdaf4879f77725845a93d1b0c90f769e
+      internalID: 669638774
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: fountain_8
+      name: objects_fountain_animated_8
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 32
         height: 48
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 03305410000000000800000000000000
-      internalID: 21300016
+      spriteID: 80818a88d71d9f04fbbf7854244cb0e8
+      internalID: -1275179756
       vertices: []
       indices: 
       edges: []
@@ -358,7 +358,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5ec419abe8b5bdc4aa059d0a3115dd01
     internalID: 0
     vertices: []
     indices: 
@@ -366,17 +366,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":48.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      fountain_0: 21300000
-      fountain_1: 21300002
-      fountain_2: 21300004
-      fountain_3: 21300006
-      fountain_4: 21300008
-      fountain_5: 21300010
-      fountain_6: 21300012
-      fountain_7: 21300014
-      fountain_8: 21300016
+      objects_fountain_animated_0: 1653741991
+      objects_fountain_animated_1: -1679592556
+      objects_fountain_animated_2: 809654652
+      objects_fountain_animated_3: -610981805
+      objects_fountain_animated_4: -1850790559
+      objects_fountain_animated_5: 2110022815
+      objects_fountain_animated_6: -1483906626
+      objects_fountain_animated_7: 669638774
+      objects_fountain_animated_8: -1275179756
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

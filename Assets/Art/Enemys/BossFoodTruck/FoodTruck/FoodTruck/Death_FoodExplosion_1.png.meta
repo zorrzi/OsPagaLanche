@@ -1,0 +1,663 @@
+fileFormatVersion: 2
+guid: 39c91962b34cd0a49a5d834fbd4ce22e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7692382013923635532
+    second: Death_FoodExplosion_1_0
+  - first:
+      213: -3804688627873815216
+    second: Death_FoodExplosion_1_1
+  - first:
+      213: -4202009972439474589
+    second: Death_FoodExplosion_1_2
+  - first:
+      213: 6006450319897530130
+    second: Death_FoodExplosion_1_3
+  - first:
+      213: -8424596146175970197
+    second: Death_FoodExplosion_1_4
+  - first:
+      213: -954642527244890321
+    second: Death_FoodExplosion_1_5
+  - first:
+      213: -7118237509028074292
+    second: Death_FoodExplosion_1_6
+  - first:
+      213: -6413855557351062235
+    second: Death_FoodExplosion_1_7
+  - first:
+      213: -1140428382320279555
+    second: Death_FoodExplosion_1_8
+  - first:
+      213: 6435562748712793199
+    second: Death_FoodExplosion_1_9
+  - first:
+      213: -3712420107600895717
+    second: Death_FoodExplosion_1_10
+  - first:
+      213: -3750942417294947053
+    second: Death_FoodExplosion_1_11
+  - first:
+      213: -1181023669923871293
+    second: Death_FoodExplosion_1_12
+  - first:
+      213: -2270410273669934488
+    second: Death_FoodExplosion_1_13
+  - first:
+      213: 6342601754263914815
+    second: Death_FoodExplosion_1_14
+  - first:
+      213: -7684453838458118795
+    second: Death_FoodExplosion_1_15
+  - first:
+      213: 8645324896388063437
+    second: Death_FoodExplosion_1_16
+  - first:
+      213: 507064951273542755
+    second: Death_FoodExplosion_1_17
+  - first:
+      213: 1954861883651318245
+    second: Death_FoodExplosion_1_18
+  - first:
+      213: -7472846934023920472
+    second: Death_FoodExplosion_1_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 74
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be4a77705b2f3590800000000000000
+      internalID: -7692382013923635532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 87
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 055ec9ed9d7033bc0800000000000000
+      internalID: -3804688627873815216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_2
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 82
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e981a71367fa5c0800000000000000
+      internalID: -4202009972439474589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 62
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f068e0eb23b5350800000000000000
+      internalID: 6006450319897530130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_4
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 81
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b647e03c072d51b80800000000000000
+      internalID: -8424596146175970197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 51
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2f461cedad60c2f0800000000000000
+      internalID: -954642527244890321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_6
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 62
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc258713b0f63d90800000000000000
+      internalID: -7118237509028074292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 38
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 525cc674a586df6a0800000000000000
+      internalID: -6413855557351062235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_8
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 69
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dffb604bd626c20f0800000000000000
+      internalID: -1140428382320279555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_9
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 57
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6433ce0936bf4950800000000000000
+      internalID: 6435562748712793199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_10
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 26
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b116e65d495da7cc0800000000000000
+      internalID: -3712420107600895717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_11
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 47
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d803caeb9f1fbc0800000000000000
+      internalID: -3750942417294947053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_12
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 41
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c50cd2ca392c9fe0800000000000000
+      internalID: -1181023669923871293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 862918f92e1ed70e0800000000000000
+      internalID: -2270410273669934488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_14
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 20
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f398ba2e0b2750850800000000000000
+      internalID: 6342601754263914815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_15
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 30
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57d11d9a2f55b5590800000000000000
+      internalID: -7684453838458118795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_16
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 5
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc02d09303d5af770800000000000000
+      internalID: 8645324896388063437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_17
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364d5baf2e4790700800000000000000
+      internalID: 507064951273542755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_18
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 12
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e1ecff9680112b10800000000000000
+      internalID: 1954861883651318245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_FoodExplosion_1_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a423ac6e4d1b4890800000000000000
+      internalID: -7472846934023920472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Death_FoodExplosion_1_0: -7692382013923635532
+      Death_FoodExplosion_1_1: -3804688627873815216
+      Death_FoodExplosion_1_10: -3712420107600895717
+      Death_FoodExplosion_1_11: -3750942417294947053
+      Death_FoodExplosion_1_12: -1181023669923871293
+      Death_FoodExplosion_1_13: -2270410273669934488
+      Death_FoodExplosion_1_14: 6342601754263914815
+      Death_FoodExplosion_1_15: -7684453838458118795
+      Death_FoodExplosion_1_16: 8645324896388063437
+      Death_FoodExplosion_1_17: 507064951273542755
+      Death_FoodExplosion_1_18: 1954861883651318245
+      Death_FoodExplosion_1_19: -7472846934023920472
+      Death_FoodExplosion_1_2: -4202009972439474589
+      Death_FoodExplosion_1_3: 6006450319897530130
+      Death_FoodExplosion_1_4: -8424596146175970197
+      Death_FoodExplosion_1_5: -954642527244890321
+      Death_FoodExplosion_1_6: -7118237509028074292
+      Death_FoodExplosion_1_7: -6413855557351062235
+      Death_FoodExplosion_1_8: -1140428382320279555
+      Death_FoodExplosion_1_9: 6435562748712793199
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

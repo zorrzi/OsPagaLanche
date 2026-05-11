@@ -25,7 +25,7 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -53,7 +53,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 16
     mipBias: 0
     wrapU: 1
@@ -67,7 +67,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -142,7 +142,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water-animation_0
+      name: water_animated_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,21 +150,21 @@ TextureImporter:
         width: 80
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 02305410000000000800000000000000
-      internalID: 21300000
+      spriteID: 8bb6257a7096d9b40a2c43413c150dbb
+      internalID: -2009618668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-animation_1
+      name: water_animated_1
       rect:
         serializedVersion: 2
         x: 0
@@ -172,21 +172,21 @@ TextureImporter:
         width: 80
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 22305410000000000800000000000000
-      internalID: 21300002
+      spriteID: 6f7182b0b1ec1fe48b1d4fc2db0fc242
+      internalID: -1631750792
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-animation_2
+      name: water_animated_2
       rect:
         serializedVersion: 2
         x: 0
@@ -194,21 +194,21 @@ TextureImporter:
         width: 80
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 42305410000000000800000000000000
-      internalID: 21300004
+      spriteID: 4723c5ac67606dc449ca6749783f11af
+      internalID: 1011122529
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: water-animation_3
+      name: water_animated_3
       rect:
         serializedVersion: 2
         x: 0
@@ -216,15 +216,15 @@ TextureImporter:
         width: 80
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 62305410000000000800000000000000
-      internalID: 21300006
+      spriteID: 77137d43240d6bc40a9036579e5dcec2
+      internalID: 613804152
       vertices: []
       indices: 
       edges: []
@@ -233,7 +233,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 02bfecd0f8976774393ddd4323be3d7d
     internalID: 0
     vertices: []
     indices: 
@@ -241,12 +241,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":80.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      water-animation_0: 21300000
-      water-animation_1: 21300002
-      water-animation_2: 21300004
-      water-animation_3: 21300006
+      water_animated_0: -2009618668
+      water_animated_1: -1631750792
+      water_animated_2: 1011122529
+      water_animated_3: 613804152
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

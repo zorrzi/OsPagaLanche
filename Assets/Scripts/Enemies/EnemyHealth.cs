@@ -14,19 +14,18 @@ public class EnemyHealth : MonoBehaviour
 
     [Header("Morte")]
     [SerializeField] private float destroyDelay = 0.8f;
+    [SerializeField] private bool isBoss = false; // Marcar TRUE no boss
 
     private Animator animator;
     private Color originalColor;
     private bool isDead = false;
 
-    // Propriedades públicas para outros scripts consultarem
     public int CurrentHealth => currentHealth;
     public int MaxHealth => maxHealth;
     public bool IsDead => isDead;
     public float HealthPercent => (float)currentHealth / maxHealth;
 
-    // Evento opcional para reagir ao dano (boss usa pra fase 2)
-    public System.Action<int, int> OnDamaged; // (currentHP, maxHP)
+    public System.Action<int, int> OnDamaged;
     public System.Action OnDeath;
 
     void Awake()
@@ -53,9 +52,11 @@ public class EnemyHealth : MonoBehaviour
         }
         else
         {
+            // Som de dano no inimigo
+            SFXManager.Instance?.Play("enemy_damage");
+
             if (animator != null)
                 animator.SetTrigger("isHurt");
-
             StartCoroutine(HurtFlash());
         }
     }
@@ -72,9 +73,14 @@ public class EnemyHealth : MonoBehaviour
         isDead = true;
         Debug.Log($"{gameObject.name} morreu!");
 
+        // Som de morte (diferente pra boss vs inimigo comum)
+        if (isBoss)
+            SFXManager.Instance?.Play("boss_death");
+        else
+            SFXManager.Instance?.Play("enemy_death");
+
         if (animator != null)
             animator.SetBool("isDead", true);
-
         OnDeath?.Invoke();
 
         Collider2D col = GetComponent<Collider2D>();
