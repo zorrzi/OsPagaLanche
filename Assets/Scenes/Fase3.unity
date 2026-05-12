@@ -14506,6 +14506,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4082399636601738111, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
+      propertyPath: m_Size.x
+      value: 6.885207
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082399636601738111, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
+      propertyPath: m_Size.y
+      value: 6.8204155
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082399636601738111, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.035142303
+      objectReference: {fileID: 0}
+    - target: {fileID: 4082399636601738111, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.108902454
+      objectReference: {fileID: 0}
     - target: {fileID: 7030193765438855922, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
       propertyPath: m_Name
       value: BossFoodTruck
@@ -14516,11 +14532,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665896831597454996, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.185979
+      value: 0.57072806
       objectReference: {fileID: 0}
     - target: {fileID: 7665896831597454996, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.9963899
+      value: 0.55588084
       objectReference: {fileID: 0}
     - target: {fileID: 7665896831597454996, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
       propertyPath: m_LocalScale.z
@@ -14528,11 +14544,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7665896831597454996, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 70.6517
+      value: 69.9164
       objectReference: {fileID: 0}
     - target: {fileID: 7665896831597454996, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -29.4246
+      value: -29.1
       objectReference: {fileID: 0}
     - target: {fileID: 7665896831597454996, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -20930,7 +20946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24212af39e8845bfae5594fa3e187b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlagTriggerPhase3
-  requireBossDefeated: 1
 --- !u!1 &2041538486
 GameObject:
   m_ObjectHideFlags: 0
