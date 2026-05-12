@@ -8,7 +8,7 @@ public class BossTracker : MonoBehaviour
     [Tooltip("Arrasta o GameObject do boss aqui (o que tem EnemyHealth com isBoss marcado)")]
     public EnemyHealth bossHealth;
 
-    public bool BossDefeated { get; set; } = false;
+    public bool BossDefeated { get; private set; } = false;
 
     void Awake()
     {
@@ -23,7 +23,7 @@ public class BossTracker : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("BossTracker nï¿½o tem boss atribuï¿½do!");
+            Debug.LogWarning("BossTracker não tem boss atribuído!");
         }
     }
 

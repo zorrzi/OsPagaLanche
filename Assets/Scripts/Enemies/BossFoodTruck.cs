@@ -253,16 +253,6 @@ public class BossFoodTruck : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
         CancelInvoke();
-
-        if (BossTracker.Instance != null)
-        {
-            BossTracker.Instance.BossDefeated = true;
-            Debug.Log("[BossFoodTruck] Boss derrotado! Flag agora pode ser ativada.");
-        }
-        else
-        {
-            Debug.LogError("[BossFoodTruck] BossTracker.Instance é null!");
-        }
     }
 
     void EnterPhase2()
