@@ -122,7 +122,6 @@ public class PlayerHealth : MonoBehaviour
 
         Debug.Log("Game Over!");
 
-        // Toca som
         SFXManager.Instance?.Play("game_over");
 
         // Para o player de se mexer
@@ -136,19 +135,38 @@ public class PlayerHealth : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
 
-        // Espera um pouco e reinicia a cena
-        StartCoroutine(RestartLevelAfterDelay());
+        // Salva o tempo atual + vidas e chaves NO ZERO (vai resetar ao respawnar)
+        if (GameData.Instance != null && LevelTimer.Instance != null)
+        {
+            // Salva tempo apenas se não for Fase1 (Fase1 reinicia tudo)
+            string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            if (currentScene != "Fase1")
+            {
+                GameData.Instance.SaveStateBeforeLevelChange(3, 0, LevelTimer.Instance.CurrentTime);
+            }
+            else
+            {
+                // Na Fase1 reseta tudo
+                GameData.Instance.accumulatedTime = 0f;
+                GameData.Instance.currentLives = 3;
+                GameData.Instance.currentKeys = 0;
+            }
+        }
+
+        StartCoroutine(RestartCurrentSceneAfterDelay());
     }
 
-    IEnumerator RestartLevelAfterDelay()
+    IEnumerator RestartCurrentSceneAfterDelay()
     {
         yield return new WaitForSeconds(respawnDelay);
 
-        // Recarrega a cena Fase1 com fade
+        // Recarrega a cena ATUAL (não volta pra Fase1)
+        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
         if (SceneFader.Instance != null)
-            SceneFader.Instance.LoadSceneWithFade("Fase1");
+            SceneFader.Instance.LoadSceneWithFade(currentScene);
         else
-            SceneManager.LoadScene("Fase1");
+            UnityEngine.SceneManagement.SceneManager.LoadScene(currentScene);
     }
 
     void UpdateHeartsUI()

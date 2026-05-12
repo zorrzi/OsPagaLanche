@@ -30,6 +30,18 @@ public class LevelTimer : MonoBehaviour
 
     void Start()
     {
+        // Se tem tempo acumulado no GameData, continua de onde parou
+        if (GameData.Instance != null && GameData.Instance.accumulatedTime > 0f)
+        {
+            currentTime = GameData.Instance.accumulatedTime;
+            Debug.Log($"Cronômetro continuando de {GetFormattedTime()}");
+        }
+        else
+        {
+            currentTime = 0f;
+            Debug.Log("Cronômetro iniciado do zero");
+        }
+
         if (startOnAwake)
             StartTimer();
     }
@@ -81,7 +93,6 @@ public class LevelTimer : MonoBehaviour
         int minutes = (int)(timeInSeconds / 60f);
         int seconds = (int)(timeInSeconds % 60f);
         int centiseconds = (int)((timeInSeconds * 100f) % 100f);
-
         return string.Format("{0:00}:{1:00}.{2:00}", minutes, seconds, centiseconds);
     }
 }

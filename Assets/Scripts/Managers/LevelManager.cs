@@ -51,9 +51,10 @@ public class LevelManager : MonoBehaviour
 
         int lives = health != null ? health.currentLives : 3;
         int keys = inventory != null ? inventory.keys : 0;
+        float currentTime = LevelTimer.Instance != null ? LevelTimer.Instance.CurrentTime : 0f;
 
         if (GameData.Instance != null)
-            GameData.Instance.SaveStateBeforeLevelChange(lives, keys);
+            GameData.Instance.SaveStateBeforeLevelChange(lives, keys, currentTime);
     }
 
     IEnumerator TransitionAfterDelay()
