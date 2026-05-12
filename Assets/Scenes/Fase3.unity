@@ -20927,7 +20927,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2016637855}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18e62b1a25bcf1f4497774ec6518c97c, type: 3}
+  m_Script: {fileID: 11500000, guid: 24212af39e8845bfae5594fa3e187b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlagTriggerPhase3
   requireBossDefeated: 1
