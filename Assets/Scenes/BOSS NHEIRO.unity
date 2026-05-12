@@ -16153,9 +16153,9 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.0049498677, y: -0.039454937}
   m_SpriteTilingProperty:
-    border: {x: 1.125, y: 0, z: 1.125, w: 2.625}
-    pivot: {x: 0.516602, y: 0.26203653}
-    oldSize: {x: 6, y: 6}
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.8125, y: 3.375}
     newSize: {x: 0.45, y: 0.54}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16513,7 +16513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 3
-  hurtDuration: 0.2
+  hurtDuration: 0.4
   spriteRenderer: {fileID: 1168530616}
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
   destroyDelay: 0.8
