@@ -14510,6 +14510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossFoodTruck
       objectReference: {fileID: 0}
+    - target: {fileID: 7030193765438855922, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 7665896831597454996, guid: 2beb87a2bf57ecc4287a5aa5d228cb7a, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.185979
