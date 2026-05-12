@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class FlagTrigger : MonoBehaviour
 {
-    [Header("Configuraï¿½ï¿½o")]
+    [Header("Configuração")]
     [Tooltip("Se marcado, exige que o boss tenha sido derrotado pra ativar.")]
     public bool requireBossDefeated = true;
 
@@ -24,19 +24,12 @@ public class FlagTrigger : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         if (triggered) return;
 
+        // Verifica se o boss foi derrotado
         if (requireBossDefeated)
         {
-            if (BossTracker.Instance == null)
+            if (BossTracker.Instance == null || !BossTracker.Instance.BossDefeated)
             {
-                Debug.LogError("BossTracker.Instance Ã© null!");
-                return;
-            }
-
-            Debug.Log($"BossTracker.Instance.BossDefeated: {BossTracker.Instance.BossDefeated}");
-
-            if (!BossTracker.Instance.BossDefeated)
-            {
-                Debug.Log("VocÃª precisa derrotar o boss antes de prosseguir!");
+                Debug.Log("Você precisa derrotar o boss antes de prosseguir!");
                 return;
             }
         }
@@ -50,7 +43,7 @@ public class FlagTrigger : MonoBehaviour
         if (LevelManager.Instance != null)
             LevelManager.Instance.CompleteLevel();
         else
-            Debug.LogWarning("LevelManager nÃ£o encontrado na cena!");
+            Debug.LogWarning("LevelManager não encontrado na cena!");
     }
 
     /// <summary>
