@@ -198,6 +198,10 @@ public class BossCoxinha : MonoBehaviour
 
     private void OnBossDamaged(int currentHP, int maxHP)
     {
+        // Se o boss já morreu (este dano foi o fatal), não dispara o Hit
+        // para não interromper a animação de Death
+        if (healthSystem.IsDead) return;
+
         anim.SetTrigger(HASH_HIT);
 
         if (!isPhase2 && currentHP <= maxHP / 2)
@@ -206,7 +210,10 @@ public class BossCoxinha : MonoBehaviour
 
     private void OnBossDeath()
     {
+        // Reseta o trigger de Hit para evitar que ele dispare logo após o Death
+        anim.ResetTrigger(HASH_HIT);
         anim.SetTrigger(HASH_DEAD);
+
         rb.linearVelocity = Vector2.zero;
         rb.bodyType = RigidbodyType2D.Kinematic;
         CancelInvoke();

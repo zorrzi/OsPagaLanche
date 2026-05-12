@@ -1,16 +1,13 @@
 fileFormatVersion: 2
-guid: 29adbb3fd09df8e40926dd7a27028d46
+guid: 7b1058cc288cd7d42945a61f1a740042
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5464067445112553872
-    second: Death_Smoke_0
+      213: 4884955186663783609
+    second: Death_Frame1_0
   - first:
-      213: -8697090909271119931
-    second: Death_Smoke_1
-  - first:
-      213: -2160318545393818409
-    second: Death_Smoke_2
+      213: 6977889695639261661
+    second: Death_Frame1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -55,10 +52,10 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 0
-  spritePivot: {x: 0.5, y: 0.5}
+  alignment: 9
+  spritePivot: {x: 0.49877015, y: 0.2515834}
   spritePixelsToUnits: 16
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 23, y: 0, z: 24, w: 47}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -132,67 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Death_Smoke_0
+      name: Death_Frame1_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 17
-        width: 9
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 07e3a49cb9bbb24b0800000000000000
-      internalID: -5464067445112553872
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_Smoke_1
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 24
-        width: 18
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5c7ad9da5e9bd4780800000000000000
-      internalID: -8697090909271119931
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Death_Smoke_2
-      rect:
-        serializedVersion: 2
-        x: 15
+        x: 24
         y: 0
-        width: 6
-        height: 6
+        width: 48
+        height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7d4ec149ab10502e0800000000000000
-      internalID: -2160318545393818409
+      spriteID: 9bcfbc45cd8dac340800000000000000
+      internalID: 4884955186663783609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Death_Frame1_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 36
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1df6e25b176d060800000000000000
+      internalID: 6977889695639261661
       vertices: []
       indices: 
       edges: []
@@ -202,7 +177,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -211,9 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Death_Smoke_0: -5464067445112553872
-      Death_Smoke_1: -8697090909271119931
-      Death_Smoke_2: -2160318545393818409
+      Death_Frame1_0: 4884955186663783609
+      Death_Frame1_1: 6977889695639261661
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

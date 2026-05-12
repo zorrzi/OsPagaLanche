@@ -16093,7 +16093,7 @@ MonoBehaviour:
   hurtDuration: 0.2
   spriteRenderer: {fileID: 0}
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
-  destroyDelay: 0.8
+  destroyDelay: 1.5
   isBoss: 0
 --- !u!95 &1128675389
 Animator:
@@ -16153,9 +16153,9 @@ BoxCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.0049498677, y: -0.039454937}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.8125, y: 3.375}
+    border: {x: 1.125, y: 0, z: 1.125, w: 2.625}
+    pivot: {x: 0.516602, y: 0.26203653}
+    oldSize: {x: 6, y: 6}
     newSize: {x: 0.45, y: 0.54}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -16280,10 +16280,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossCoxinha
   speed: 2.5
   speedPhase2: 4
-  attackRange: 4
+  attackRange: 10
   detectionRange: 12
   attackDelay: 2
-  tomatoPrefab: {fileID: 4959595563956608190, guid: e620c55ed50e82546aa1401eb98f3989, type: 3}
+  tomatoPrefab: {fileID: 4959595563956608190, guid: 5035ad2c4ca6db6479ecb50c8911c9b8, type: 3}
   tomatoFirePoint: {fileID: 1627356809}
   attack1Cooldown: 2
   smokePrefab: {fileID: 8744023307353148900, guid: 3c92c4177579dea41a29b26feac982bb, type: 3}
