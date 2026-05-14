@@ -14978,6 +14978,54 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &414100715
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 414100717}
+  - component: {fileID: 414100716}
+  m_Layer: 0
+  m_Name: LevelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &414100716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414100715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a50b8741d2198429d21c55c53440b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LevelManager
+  nextSceneName: GameOverScene
+  isLastLevel: 1
+  victorySceneName: GameOverScene
+  transitionDelay: 1.5
+--- !u!4 &414100717
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414100715}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &448725320
 GameObject:
   m_ObjectHideFlags: 0
@@ -20168,6 +20216,87 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &1791958172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1791958174}
+  - component: {fileID: 1791958173}
+  m_Layer: 0
+  m_Name: SFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1791958173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791958172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ec0273ed0f49c48ab7b23459eb0a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SFXManager
+  sounds:
+  - name: jump
+    clip: {fileID: 8300000, guid: 31af316084a55384f824fed8a9268870, type: 3}
+    volume: 0
+  - name: attack_melee
+    clip: {fileID: 8300000, guid: fdbee58a4ed781d4eb8822b5df0606a4, type: 3}
+    volume: 0.6
+  - name: attack_ranged
+    clip: {fileID: 8300000, guid: 3628cb39cffe55444b0f548f6408f15a, type: 3}
+    volume: 0.5
+  - name: enemy_damage
+    clip: {fileID: 8300000, guid: af3fb8212f69ca2458d855ceedf25bb4, type: 3}
+    volume: 0.6
+  - name: enemy_death
+    clip: {fileID: 8300000, guid: a14f08b0c2f295b4d8c0577d921fdb91, type: 3}
+    volume: 0.6
+  - name: boss_death
+    clip: {fileID: 8300000, guid: f1fa2f7681ff4b7418d363e4fba2c132, type: 3}
+    volume: 0.8
+  - name: heart_pickup
+    clip: {fileID: 8300000, guid: 218821bd0aa42c8499fc75735fe22b87, type: 3}
+    volume: 0.7
+  - name: key_pickup
+    clip: {fileID: 8300000, guid: dbbe88b9c5a718546af5f98e80154b9a, type: 3}
+    volume: 0.7
+  - name: damage_taken
+    clip: {fileID: 8300000, guid: 11948380511e9bf4c9ba1c2983a7851d, type: 3}
+    volume: 0.7
+  - name: chest_open
+    clip: {fileID: 8300000, guid: 002c99ad750821f47ab38e302ef6462f, type: 3}
+    volume: 0.7
+  - name: game_over
+    clip: {fileID: 8300000, guid: 315ab83822e49fe40928b5d3f5e49e98, type: 3}
+    volume: 0.7
+  - name: level_complete
+    clip: {fileID: 8300000, guid: c2affe09744a58f4dbea66f630302bda, type: 3}
+    volume: 0.8
+--- !u!4 &1791958174
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791958172}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1835913156
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20954,6 +21083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24212af39e8845bfae5594fa3e187b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlagTriggerPhase3
+  requireBossDefeated: 1
 --- !u!1 &2041538486
 GameObject:
   m_ObjectHideFlags: 0
@@ -61451,3 +61581,5 @@ SceneRoots:
   - {fileID: 195544838}
   - {fileID: 692958962}
   - {fileID: 2016637860}
+  - {fileID: 414100717}
+  - {fileID: 1791958174}
