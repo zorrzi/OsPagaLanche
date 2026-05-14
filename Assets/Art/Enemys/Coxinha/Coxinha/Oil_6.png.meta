@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7d902bf2be4dec94aaa6f14a8e9afdcb
+guid: 915a04a21ae50d24e84970944a0abfea
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2434467781226262267
-    second: Tomato_Frame2 1_0
+      213: 7535900296415498025
+    second: Oil_6_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tomato_Frame2 1_0
+      name: Oil_6_0
       rect:
         serializedVersion: 2
-        x: 20
-        y: 1
-        width: 58
-        height: 56
+        x: 2
+        y: 2
+        width: 95
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bfeef157c87f8c120800000000000000
-      internalID: 2434467781226262267
+      spriteID: 92f4b968465e49860800000000000000
+      internalID: 7535900296415498025
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tomato_Frame2 1_0: 2434467781226262267
+      Oil_6_0: 7535900296415498025
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
