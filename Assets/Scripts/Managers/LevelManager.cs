@@ -6,15 +6,15 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
 
-    [Header("Configuração da fase atual")]
-    [Tooltip("Cena pra carregar quando completar essa fase. Deixa vazio se for a última.")]
+    [Header("Configuraï¿½ï¿½o da fase atual")]
+    [Tooltip("Cena pra carregar quando completar essa fase. Deixa vazio se for a ï¿½ltima.")]
     public string nextSceneName = "";
 
-    [Tooltip("Se marcado, ao completar essa fase vai pra cena de Vitória")]
+    [Tooltip("Se marcado, ao completar essa fase vai pra cena de Vitï¿½ria")]
     public bool isLastLevel = false;
 
-    [Tooltip("Nome da cena de vitória (ex: 'Victory' ou 'Leaderboard')")]
-    public string victorySceneName = "Victory";
+    [Tooltip("Nome da cena de vitï¿½ria (ex: 'Victory' ou 'Leaderboard')")]
+    public string victorySceneName = "GameOverScene";
 
     [Header("Delay")]
     public float transitionDelay = 1.5f;
@@ -31,10 +31,10 @@ public class LevelManager : MonoBehaviour
         // Salva o estado do player (vidas + chaves) antes de trocar de cena
         SavePlayerState();
 
-        // Toca som de vitória
+        // Toca som de vitï¿½ria
         SFXManager.Instance?.Play("level_complete");
 
-        // Para o cronômetro
+        // Para o cronï¿½metro
         if (LevelTimer.Instance != null)
             LevelTimer.Instance.StopTimer();
 
@@ -65,7 +65,7 @@ public class LevelManager : MonoBehaviour
 
         if (string.IsNullOrEmpty(targetScene))
         {
-            Debug.LogWarning("Nenhuma próxima cena configurada!");
+            Debug.LogWarning("Nenhuma prï¿½xima cena configurada!");
             yield break;
         }
 
