@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement; // Necessário para carregar cenas
 
 [RequireComponent(typeof(Collider2D))]
 public class FlagTrigger3 : MonoBehaviour

@@ -19,6 +19,10 @@ public class LevelManager : MonoBehaviour
     [Header("Delay")]
     public float transitionDelay = 1.5f;
 
+    [Header("Leaderboard")]
+    [Tooltip("Se marcado, envia a run para o leaderboard ao completar a fase.")]
+    public bool submitRunOnComplete = true;
+
     void Awake()
     {
         Instance = this;
@@ -37,6 +41,8 @@ public class LevelManager : MonoBehaviour
         // Para o cron�metro
         if (LevelTimer.Instance != null)
             LevelTimer.Instance.StopTimer();
+
+        SubmitLeaderboardRun();
 
         StartCoroutine(TransitionAfterDelay());
     }
@@ -73,5 +79,25 @@ public class LevelManager : MonoBehaviour
             SceneFader.Instance.LoadSceneWithFade(targetScene);
         else
             SceneManager.LoadScene(targetScene);
+    }
+
+    void SubmitLeaderboardRun()
+    {
+        if (!submitRunOnComplete) return;
+        if (GameData.Instance == null) return;
+
+        string username = GameData.Instance.playerName;
+        if (string.IsNullOrWhiteSpace(username)) return;
+
+        int durationSeconds = 0;
+        if (LevelTimer.Instance != null)
+            durationSeconds = Mathf.RoundToInt(LevelTimer.Instance.CurrentTime);
+
+        LeaderboardApiClient client = LeaderboardApiClient.EnsureInstance();
+        client.SubmitRun(username, durationSeconds, 0, (ok, error) =>
+        {
+            if (!ok && !string.IsNullOrEmpty(error))
+                Debug.LogWarning($"Falha ao enviar leaderboard: {error}");
+        });
     }
 }
