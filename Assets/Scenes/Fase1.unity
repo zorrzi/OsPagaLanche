@@ -14349,11 +14349,11 @@ MonoBehaviour:
   speed: 2
   speedPhase2: 3.5
   attackRange: 6
-  detectionRange: 7.5
+  detectionRange: 9
   pizzaSlicePrefab: {fileID: 5251152902164886533, guid: 6eb4e567cd62a47498d35cb0ad962422, type: 3}
   firePoint: {fileID: 1620171382}
-  attack1Cooldown: 2
-  attack2Cooldown: 5
+  attack1Cooldown: 1.5
+  attack2Cooldown: 4.5
 --- !u!114 &448725327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15340,7 +15340,7 @@ MonoBehaviour:
   playerName: 
   selectedCharacterIndex: 3
   lastLevelTime: 0
-  totalGameTime: 0
+  accumulatedTime: 0
   currentLives: 3
   currentKeys: 0
   hasGameStarted: 0

@@ -14,7 +14,7 @@ public class LevelManager : MonoBehaviour
     public bool isLastLevel = false;
 
     [Tooltip("Nome da cena de vit�ria (ex: 'Victory' ou 'Leaderboard')")]
-    public string victorySceneName = "Victory";
+    public string victorySceneName = "GameOverScene";
 
     [Header("Delay")]
     public float transitionDelay = 1.5f;
