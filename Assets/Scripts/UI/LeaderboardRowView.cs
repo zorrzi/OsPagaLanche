@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using System;
 
 public class LeaderboardRowView : MonoBehaviour
 {
@@ -15,7 +16,19 @@ public class LeaderboardRowView : MonoBehaviour
         if (playerText != null) playerText.text = run.username;
         if (timeText != null) timeText.text = LevelTimer.FormatTime(run.duration);
         if (scoreText != null) scoreText.text = run.score.ToString();
-        if (dateText != null) dateText.text = run.created_at;
+        if (dateText != null) dateText.text = FormatDate(run.created_at);
+    }
+
+    private string FormatDate(string dateTimeStr)
+    {
+        if (string.IsNullOrEmpty(dateTimeStr)) return "-";
+        
+        if (System.DateTime.TryParse(dateTimeStr, out System.DateTime dt))
+        {
+            return dt.ToString("dd/MM HH:mm");
+        }
+        
+        return "-";
     }
 }
 

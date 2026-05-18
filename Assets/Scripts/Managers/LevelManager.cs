@@ -6,14 +6,14 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
 
-    [Header("Configura��o da fase atual")]
-    [Tooltip("Cena pra carregar quando completar essa fase. Deixa vazio se for a �ltima.")]
+    [Header("Configuração da fase atual")]
+    [Tooltip("Cena pra carregar quando completar essa fase. Deixa vazio se for a última.")]
     public string nextSceneName = "";
 
-    [Tooltip("Se marcado, ao completar essa fase vai pra cena de Vit�ria")]
+    [Tooltip("Se marcado, ao completar essa fase vai pra cena de Vitória")]
     public bool isLastLevel = false;
 
-    [Tooltip("Nome da cena de vit�ria (ex: 'Victory' ou 'Leaderboard')")]
+    [Tooltip("Nome da cena de vitória (ex: 'Victory' ou 'Leaderboard')")]
     public string victorySceneName = "GameOverScene";
 
     [Header("Delay")]
@@ -32,13 +32,13 @@ public class LevelManager : MonoBehaviour
     {
         Debug.Log("Fase completada!");
 
-        // Salva o estado do player (vidas + chaves) antes de trocar de cena
+        // Salva o estado do player (vidas + chaves + munição + tempo) antes de trocar de cena
         SavePlayerState();
 
-        // Toca som de vit�ria
+        // Toca som de vitória
         SFXManager.Instance?.Play("level_complete");
 
-        // Para o cron�metro
+        // Para o cronômetro
         if (LevelTimer.Instance != null)
             LevelTimer.Instance.StopTimer();
 
@@ -57,10 +57,11 @@ public class LevelManager : MonoBehaviour
 
         int lives = health != null ? health.currentLives : 3;
         int keys = inventory != null ? inventory.keys : 0;
+        int ammo = inventory != null ? inventory.ammo : 0; // ← NOVO: salva munição
         float currentTime = LevelTimer.Instance != null ? LevelTimer.Instance.CurrentTime : 0f;
 
         if (GameData.Instance != null)
-            GameData.Instance.SaveStateBeforeLevelChange(lives, keys, currentTime);
+            GameData.Instance.SaveStateBeforeLevelChange(lives, keys, currentTime, ammo); // ← passa ammo
     }
 
     IEnumerator TransitionAfterDelay()
@@ -71,7 +72,7 @@ public class LevelManager : MonoBehaviour
 
         if (string.IsNullOrEmpty(targetScene))
         {
-            Debug.LogWarning("Nenhuma pr�xima cena configurada!");
+            Debug.LogWarning("Nenhuma próxima cena configurada!");
             yield break;
         }
 
@@ -83,21 +84,50 @@ public class LevelManager : MonoBehaviour
 
     void SubmitLeaderboardRun()
     {
-        if (!submitRunOnComplete) return;
-        if (GameData.Instance == null) return;
+        // IMPORTANTE: Run deve ser enviada APENAS no final de TUDO (após completar a última fase)
+        // Nunca enviar em fases intermediárias
+        if (!isLastLevel)
+        {
+            Debug.Log($"[LevelManager] Fase {SceneManager.GetActiveScene().name} completada, mas não é a última. Não enviando run ainda.");
+            return;
+        }
+
+        if (!submitRunOnComplete)
+        {
+            Debug.Log("[LevelManager] Submissão de leaderboard desabilitada para esta fase.");
+            return;
+        }
+
+        if (GameData.Instance == null)
+        {
+            Debug.LogError("[LevelManager] GameData.Instance é nulo! Não é possível submeter run.");
+            return;
+        }
 
         string username = GameData.Instance.playerName;
-        if (string.IsNullOrWhiteSpace(username)) return;
+        if (string.IsNullOrWhiteSpace(username))
+        {
+            Debug.LogError("[LevelManager] Nome do jogador vazio! Não é possível submeter run.");
+            return;
+        }
 
         int durationSeconds = 0;
         if (LevelTimer.Instance != null)
             durationSeconds = Mathf.RoundToInt(LevelTimer.Instance.CurrentTime);
 
+        Debug.Log($"JOGO FINALIZADO! Enviando run final: jogador='{username}', tempo total={durationSeconds}s");
+
         LeaderboardApiClient client = LeaderboardApiClient.EnsureInstance();
         client.SubmitRun(username, durationSeconds, 0, (ok, error) =>
         {
-            if (!ok && !string.IsNullOrEmpty(error))
-                Debug.LogWarning($"Falha ao enviar leaderboard: {error}");
+            if (ok)
+            {
+                Debug.Log($"[LevelManager] Run FINAL submetida com sucesso para '{username}'!");
+            }
+            else
+            {
+                Debug.LogWarning($"[LevelManager] ERRO ao submeter run final: {error}");
+            }
         });
     }
 }
