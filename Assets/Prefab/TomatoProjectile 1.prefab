@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8326342763840513795}
   - component: {fileID: 5352109510738695506}
   - component: {fileID: 5900463989097299516}
-  - component: {fileID: 1009330189982671778}
+  - component: {fileID: 8536385922369111195}
   m_Layer: 0
   m_Name: TomatoProjectile 1
   m_TagString: Untagged
@@ -157,7 +157,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.2
---- !u!114 &1009330189982671778
+--- !u!114 &8536385922369111195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,10 +166,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4959595563956608190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46f1bafa96489cf4baf9cc602bb380fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 165d5d392852b4c4aa16fb4b115c2d7b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Projectile
-  speed: 6
+  m_EditorClassIdentifier: Assembly-CSharp::TomatoProjectile
   damage: 1
-  forcedDirection: {x: 0, y: 0}
-  homing: 0
+  arcHeight: 3
+  targetYOffset: 0
+  maxLifetime: 5
+  spinSpeed: 360

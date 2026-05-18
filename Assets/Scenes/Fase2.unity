@@ -78709,6 +78709,7 @@ MonoBehaviour:
   isLastLevel: 0
   victorySceneName: Victory
   transitionDelay: 1.5
+  submitRunOnComplete: 1
 --- !u!4 &1459282148
 Transform:
   m_ObjectHideFlags: 0
@@ -78841,15 +78842,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossCoxinha
   speed: 2.5
   speedPhase2: 4
-  attackRange: 10
+  attackRange: 2
   detectionRange: 12
   attackDelay: 2
   tomatoPrefab: {fileID: 4959595563956608190, guid: 5035ad2c4ca6db6479ecb50c8911c9b8, type: 3}
   tomatoFirePoint: {fileID: 1953729174}
   attack1Cooldown: 2
-  smokePrefab: {fileID: 8744023307353148900, guid: 3c92c4177579dea41a29b26feac982bb, type: 3}
+  smokePrefab: {fileID: 8744023307353148900, guid: 576adfc8f0e2b5049a528f23b5bce72b, type: 3}
   smokeFirePoint: {fileID: 1597281398}
-  attack2Cooldown: 6
+  attack2Cooldown: 4
   attack1CooldownPhase2: 1.2
   attack2CooldownPhase2: 3.5
 --- !u!114 &1499849094
@@ -79032,15 +79033,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499849092}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 210, y: -8, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 211.5, y: -8, z: 0}
   m_LocalScale: {x: 1.4366778, y: 1.420078, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1953729174}
   - {fileID: 1597281398}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1535152166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79414,7 +79415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1597281398}
   m_Layer: 0
-  m_Name: SmokeFirePoint
+  m_Name: OilFirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
