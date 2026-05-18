@@ -78643,7 +78643,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f58684333bde13c4fb1a346c089865b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BossTracker
-  bossHealth: {fileID: 0}
+  bossHealth: {fileID: 1499849094}
 --- !u!4 &1498507579
 Transform:
   m_ObjectHideFlags: 0
@@ -78723,7 +78723,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   hurtColor: {r: 1, g: 0, b: 0, a: 1}
   destroyDelay: 1.5
-  isBoss: 0
+  isBoss: 1
 --- !u!95 &1499849095
 Animator:
   serializedVersion: 7

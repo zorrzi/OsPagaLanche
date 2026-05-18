@@ -107,7 +107,7 @@ public class PlayerMovement : MonoBehaviour
             meleeCooldownTimer = meleeCooldown;
         }
 
-        // ATAQUE RANGED — só se tiver munição
+        // ATAQUE RANGED ï¿½ sï¿½ se tiver muniï¿½ï¿½o
         if (Input.GetKeyDown(rangedKey) && rangedCooldownTimer <= 0f)
         {
             if (inventory != null && inventory.HasAmmo())
@@ -118,7 +118,7 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                Debug.Log("Sem lanches! Abra baús pra conseguir munição.");
+                Debug.Log("Sem lanches! Abra baï¿½s pra conseguir muniï¿½ï¿½o.");
                 // Opcional: som de "click vazio" pra feedback
             }
         }
@@ -140,10 +140,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hamburgerPrefab == null || firePoint == null) return;
 
-        // Consome munição
+        // Consome muniï¿½ï¿½o
         if (inventory != null)
         {
-            if (!inventory.UseAmmo()) return; // segurança extra
+            if (!inventory.UseAmmo()) return; // seguranï¿½a extra
         }
 
         GameObject proj = Instantiate(hamburgerPrefab, firePoint.position, Quaternion.identity);
