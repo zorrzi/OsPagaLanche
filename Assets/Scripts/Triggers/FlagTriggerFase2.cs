@@ -1,8 +1,7 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Necessário para carregar cenas
 
 [RequireComponent(typeof(Collider2D))]
-public class FlagTrigger3 : MonoBehaviour
+public class FlagTrigger2 : MonoBehaviour
 {
     [Header("Configura��o")]
     [Tooltip("Se marcado, exige que o boss tenha sido derrotado pra ativar.")]

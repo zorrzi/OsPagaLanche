@@ -6,18 +6,22 @@ public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
 
-    [Header("Configuração da fase atual")]
-    [Tooltip("Cena pra carregar quando completar essa fase. Deixa vazio se for a última.")]
+    [Header("Configuraï¿½ï¿½o da fase atual")]
+    [Tooltip("Cena pra carregar quando completar essa fase. Deixa vazio se for a ï¿½ltima.")]
     public string nextSceneName = "";
 
-    [Tooltip("Se marcado, ao completar essa fase vai pra cena de Vitória")]
+    [Tooltip("Se marcado, ao completar essa fase vai pra cena de Vitï¿½ria")]
     public bool isLastLevel = false;
 
-    [Tooltip("Nome da cena de vitória (ex: 'Victory' ou 'Leaderboard')")]
-    public string victorySceneName = "Victory";
+    [Tooltip("Nome da cena de vitï¿½ria (ex: 'Victory' ou 'Leaderboard')")]
+    public string victorySceneName = "GameOverScene";
 
     [Header("Delay")]
     public float transitionDelay = 1.5f;
+
+    [Header("Leaderboard")]
+    [Tooltip("Se marcado, envia a run para o leaderboard ao completar a fase.")]
+    public bool submitRunOnComplete = true;
 
     void Awake()
     {
@@ -31,12 +35,14 @@ public class LevelManager : MonoBehaviour
         // Salva o estado do player (vidas + chaves) antes de trocar de cena
         SavePlayerState();
 
-        // Toca som de vitória
+        // Toca som de vitï¿½ria
         SFXManager.Instance?.Play("level_complete");
 
-        // Para o cronômetro
+        // Para o cronï¿½metro
         if (LevelTimer.Instance != null)
             LevelTimer.Instance.StopTimer();
+
+        SubmitLeaderboardRun();
 
         StartCoroutine(TransitionAfterDelay());
     }
@@ -65,7 +71,7 @@ public class LevelManager : MonoBehaviour
 
         if (string.IsNullOrEmpty(targetScene))
         {
-            Debug.LogWarning("Nenhuma próxima cena configurada!");
+            Debug.LogWarning("Nenhuma prï¿½xima cena configurada!");
             yield break;
         }
 
@@ -73,5 +79,25 @@ public class LevelManager : MonoBehaviour
             SceneFader.Instance.LoadSceneWithFade(targetScene);
         else
             SceneManager.LoadScene(targetScene);
+    }
+
+    void SubmitLeaderboardRun()
+    {
+        if (!submitRunOnComplete) return;
+        if (GameData.Instance == null) return;
+
+        string username = GameData.Instance.playerName;
+        if (string.IsNullOrWhiteSpace(username)) return;
+
+        int durationSeconds = 0;
+        if (LevelTimer.Instance != null)
+            durationSeconds = Mathf.RoundToInt(LevelTimer.Instance.CurrentTime);
+
+        LeaderboardApiClient client = LeaderboardApiClient.EnsureInstance();
+        client.SubmitRun(username, durationSeconds, 0, (ok, error) =>
+        {
+            if (!ok && !string.IsNullOrEmpty(error))
+                Debug.LogWarning($"Falha ao enviar leaderboard: {error}");
+        });
     }
 }
