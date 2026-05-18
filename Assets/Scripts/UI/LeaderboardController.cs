@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,8 +7,10 @@ using UnityEngine.UI;
 public class LeaderboardController : MonoBehaviour
 {
     [Header("UI")]
-    [SerializeField] private TextMeshProUGUI leaderboardText;
+    [SerializeField] private Transform listParent;
+    [SerializeField] private GameObject rowPrefab;
     [SerializeField] private TextMeshProUGUI statusText;
+    [SerializeField] private Transform headerContainer;
 
     [Header("Config")]
     [SerializeField] private int limit = 50;
@@ -45,20 +45,12 @@ public class LeaderboardController : MonoBehaviour
         {
             SetStatus("Falha ao carregar leaderboard");
             Debug.LogWarning($"Leaderboard error: {error}");
-            if (leaderboardText != null)
-            {
-                leaderboardText.text = string.Empty;
-            }
             return;
         }
 
         if (runs == null || runs.Length == 0)
         {
             SetStatus("Sem registros");
-            if (leaderboardText != null)
-            {
-                leaderboardText.text = string.Empty;
-            }
             return;
         }
 
@@ -68,51 +60,68 @@ public class LeaderboardController : MonoBehaviour
             ordered = runs.OrderBy(r => r.duration).ThenBy(r => r.created_at).ToArray();
         }
 
-        StringBuilder sb = new StringBuilder();
-        
-        // Header
-        sb.AppendLine("# | Player | Time | Score | Date");
-        sb.AppendLine(new string('-', 50));
-        
-        // Rows
-        for (int i = 0; i < ordered.Length; i++)
+        if (listParent == null)
         {
-            string rank = (i + 1).ToString().PadLeft(3);
-            string player = ordered[i].username.PadRight(12);
-            string time = LevelTimer.FormatTime(ordered[i].duration).PadRight(10);
-            string score = ordered[i].score.ToString().PadLeft(6);
-            string date = FormatDate(ordered[i].created_at).PadRight(15);
-            
-            sb.AppendLine($"{rank} | {player} | {time} | {score} | {date}");
+            Debug.LogError("[Leaderboard] listParent is null! Cannot instantiate rows.");
+            SetStatus("Erro ao carregar leaderboard");
+            return;
         }
 
-        if (leaderboardText != null)
+        if (rowPrefab == null)
         {
-            leaderboardText.text = sb.ToString();
-            leaderboardText.ForceMeshUpdate();
+            Debug.LogError("[Leaderboard] rowPrefab is null! Cannot instantiate rows.");
+            SetStatus("Erro ao carregar leaderboard");
+            return;
+        }
+
+        for (int i = 0; i < ordered.Length; i++)
+        {
+            GameObject rowInstance = Instantiate(rowPrefab, listParent, false);
+            LeaderboardRowView row = rowInstance.GetComponent<LeaderboardRowView>();
+            
+            if (row == null)
+            {
+                Debug.LogError($"[Leaderboard] LeaderboardRowView component not found on prefab instance at index {i}");
+                Destroy(rowInstance);
+                continue;
+            }
+            
+            row.SetData(i + 1, ordered[i]);
+        }
+
+        // Force rebuild of content layout
+        if (listParent != null)
+        {
+            RectTransform contentRect = listParent as RectTransform;
+            if (contentRect != null)
+            {
+                LayoutRebuilder.ForceRebuildLayoutImmediate(contentRect);
+                Debug.Log($"[Leaderboard] Layout rebuilt for content. Child count: {listParent.childCount}");
+            }
+            else
+            {
+                Debug.LogWarning("[Leaderboard] listParent is not a RectTransform!");
+            }
         }
 
         SetStatus(string.Empty);
     }
 
-    private string FormatDate(string dateTimeStr)
-    {
-        if (string.IsNullOrEmpty(dateTimeStr)) return "-";
-        
-        if (System.DateTime.TryParse(dateTimeStr, out System.DateTime dt))
-        {
-            return dt.ToString("dd/MM HH:mm");
-        }
-        
-        return "-";
-    }
 
     private void ClearList()
     {
-        if (leaderboardText != null)
+        if (listParent == null)
         {
-            leaderboardText.text = string.Empty;
+            Debug.LogWarning("[Leaderboard] listParent is null! Cannot clear list.");
+            return;
         }
+        
+        for (int i = listParent.childCount - 1; i >= 0; i--)
+        {
+            Destroy(listParent.GetChild(i).gameObject);
+        }
+        
+        Debug.Log("[Leaderboard] List cleared. All child rows destroyed.");
     }
 
     private void SetStatus(string message)

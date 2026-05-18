@@ -5,7 +5,7 @@ public class MainMenuController : MonoBehaviour
 {
     public void OnPlayButton()
     {
-        Debug.Log("Indo para tela de seleção de personagem");
+        Debug.Log("Indo para tela de seleï¿½ï¿½o de personagem");
         if (SceneFader.Instance != null)
             SceneFader.Instance.LoadSceneWithFade("CharacterSelect");
         else
@@ -19,6 +19,15 @@ public class MainMenuController : MonoBehaviour
             SceneFader.Instance.LoadSceneWithFade("Leaderboard");
         else
             SceneManager.LoadScene("Leaderboard");
+    }
+
+    public void OnLeaderboardBackButton()
+    {
+        Debug.Log("Voltando do Leaderboard para o Menu Principal");
+        if (SceneFader.Instance != null)
+            SceneFader.Instance.LoadSceneWithFade("MainMenu");
+        else
+            SceneManager.LoadScene("MainMenu");
     }
 
     public void OnQuitButton()
