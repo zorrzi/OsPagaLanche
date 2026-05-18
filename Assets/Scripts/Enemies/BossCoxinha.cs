@@ -79,8 +79,6 @@ public class BossCoxinha : MonoBehaviour
             else return;
         }
 
-        if (Input.GetKeyDown(KeyCode.J)) healthSystem.TakeDamage(1);
-
         float dist = Vector2.Distance(transform.position, player.position);
         attack1Timer -= Time.deltaTime;
         attack2Timer -= Time.deltaTime;
