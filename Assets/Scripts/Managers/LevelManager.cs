@@ -83,21 +83,50 @@ public class LevelManager : MonoBehaviour
 
     void SubmitLeaderboardRun()
     {
-        if (!submitRunOnComplete) return;
-        if (GameData.Instance == null) return;
+        // IMPORTANTE: Run deve ser enviada APENAS no final de TUDO (após completar a última fase)
+        // Nunca enviar em fases intermediárias
+        if (!isLastLevel)
+        {
+            Debug.Log($"[LevelManager] Fase {SceneManager.GetActiveScene().name} completada, mas não é a última. Não enviando run ainda.");
+            return;
+        }
+
+        if (!submitRunOnComplete)
+        {
+            Debug.Log("[LevelManager] Submissão de leaderboard desabilitada para esta fase.");
+            return;
+        }
+
+        if (GameData.Instance == null)
+        {
+            Debug.LogError("[LevelManager] GameData.Instance é nulo! Não é possível submeter run.");
+            return;
+        }
 
         string username = GameData.Instance.playerName;
-        if (string.IsNullOrWhiteSpace(username)) return;
+        if (string.IsNullOrWhiteSpace(username))
+        {
+            Debug.LogError("[LevelManager] Nome do jogador vazio! Não é possível submeter run.");
+            return;
+        }
 
         int durationSeconds = 0;
         if (LevelTimer.Instance != null)
             durationSeconds = Mathf.RoundToInt(LevelTimer.Instance.CurrentTime);
 
+        Debug.Log($"[LevelManager] ✓✓✓ JOGO FINALIZADO! Enviando run final: jogador='{username}', tempo total={durationSeconds}s");
+
         LeaderboardApiClient client = LeaderboardApiClient.EnsureInstance();
         client.SubmitRun(username, durationSeconds, 0, (ok, error) =>
         {
-            if (!ok && !string.IsNullOrEmpty(error))
-                Debug.LogWarning($"Falha ao enviar leaderboard: {error}");
+            if (ok)
+            {
+                Debug.Log($"[LevelManager] ✓✓✓ Run FINAL submetida com sucesso para '{username}'!");
+            }
+            else
+            {
+                Debug.LogWarning($"[LevelManager] ✗✗✗ ERRO ao submeter run final: {error}");
+            }
         });
     }
 }
