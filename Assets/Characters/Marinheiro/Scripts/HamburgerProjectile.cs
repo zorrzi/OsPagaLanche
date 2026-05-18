@@ -8,10 +8,19 @@ public class HamburgerProjectile : MonoBehaviour
 
     [Header("Dano")]
     public int damage = 1;
+    
+    [Header("Timeout")]
+    // Lifetime in seconds before projectile is automatically destroyed
+    public float lifetime = 0.5f;
 
     void Start()
     {
-        // Espelha o sprite na direção certa
+        // Destroy after lifetime seconds to avoid lingering projectiles
+        if (lifetime > 0f)
+        {
+            Destroy(gameObject, lifetime);
+        }
+        // Espelha o sprite na direï¿½ï¿½o certa
         if (direction.x < 0)
         {
             Vector3 s = transform.localScale;
@@ -38,7 +47,7 @@ public class HamburgerProjectile : MonoBehaviour
             return;
         }
 
-        // Acertou o chão/parede
+        // Acertou o chï¿½o/parede
         if (col.CompareTag("Ground"))
         {
             Destroy(gameObject);
