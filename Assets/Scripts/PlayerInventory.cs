@@ -3,11 +3,17 @@ using System.Collections.Generic;
 
 public class PlayerInventory : MonoBehaviour
 {
+    [Header("Chaves")]
     public int keys = 0;
     public GameObject keyIconPrefab;
     public Transform keysContainer;
 
+    [Header("Munição (Lanches)")]
+    public int ammo = 0;
+
     private List<GameObject> keyIcons = new List<GameObject>();
+
+    public System.Action<int> OnAmmoChanged;
 
     void Start()
     {
@@ -24,15 +30,16 @@ public class PlayerInventory : MonoBehaviour
                 Debug.LogWarning("KeysContainer não encontrado na cena!");
             }
         }
+
+        OnAmmoChanged?.Invoke(ammo);
     }
+
 
     public void AddKey()
     {
         keys++;
         Debug.Log("Chave coletada! Total: " + keys);
-
         SFXManager.Instance?.Play("key_pickup");
-
         AddKeyIcon();
     }
 
@@ -75,5 +82,37 @@ public class PlayerInventory : MonoBehaviour
             keyIcons.RemoveAt(keyIcons.Count - 1);
             Destroy(icon);
         }
+    }
+
+
+    public void AddAmmo(int amount = 1)
+    {
+        ammo += amount;
+        Debug.Log($"Lanche coletado! Munição: {ammo}");
+        SFXManager.Instance?.Play("heart_pickup"); // pode mudar pra um som específico depois
+        OnAmmoChanged?.Invoke(ammo);
+    }
+
+    public bool UseAmmo()
+    {
+        if (ammo > 0)
+        {
+            ammo--;
+            Debug.Log($"Lanche usado! Restantes: {ammo}");
+            OnAmmoChanged?.Invoke(ammo);
+            return true;
+        }
+        return false;
+    }
+
+    public bool HasAmmo()
+    {
+        return ammo > 0;
+    }
+
+    public void SetAmmoSilent(int amount)
+    {
+        ammo = amount;
+        OnAmmoChanged?.Invoke(ammo);
     }
 }

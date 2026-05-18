@@ -29,8 +29,9 @@ public class PlayerMovement : MonoBehaviour
     private float meleeCooldownTimer = 0f;
     private Rigidbody2D rb;
     private Animator anim;
+    private PlayerInventory inventory;
     private bool isGrounded = false;
-    private bool wasGrounded = false; // pra detectar pouso
+    private bool wasGrounded = false;
     private bool isOnLadder = false;
     private bool jumpRequested = false;
     private Vector2 movementVel;
@@ -39,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        inventory = GetComponent<PlayerInventory>();
     }
 
     void Update()
@@ -57,22 +59,14 @@ public class PlayerMovement : MonoBehaviour
         wasGrounded = isGrounded;
         isGrounded = hit.collider != null && hit.collider.CompareTag("Ground");
 
-        // Detecta pouso (estava no ar, agora está no chão)
         if (isGrounded && !wasGrounded)
-        {
             SFXManager.Instance?.Play("land");
-        }
 
-        if (isGrounded)
-            coyoteTimeCounter = coyoteTime;
-        else
-            coyoteTimeCounter -= Time.deltaTime;
+        if (isGrounded) coyoteTimeCounter = coyoteTime;
+        else coyoteTimeCounter -= Time.deltaTime;
 
-        if (rangedCooldownTimer > 0f)
-            rangedCooldownTimer -= Time.deltaTime;
-
-        if (meleeCooldownTimer > 0f)
-            meleeCooldownTimer -= Time.deltaTime;
+        if (rangedCooldownTimer > 0f) rangedCooldownTimer -= Time.deltaTime;
+        if (meleeCooldownTimer > 0f) meleeCooldownTimer -= Time.deltaTime;
 
         // INPUT MOVIMENTO
         float moveInput = Input.GetAxisRaw("Horizontal");
@@ -113,12 +107,20 @@ public class PlayerMovement : MonoBehaviour
             meleeCooldownTimer = meleeCooldown;
         }
 
-        // ATAQUE RANGED
+        // ATAQUE RANGED — só se tiver munição
         if (Input.GetKeyDown(rangedKey) && rangedCooldownTimer <= 0f)
         {
-            SFXManager.Instance?.Play("attack_ranged");
-            anim.SetTrigger("AttackRanged");
-            rangedCooldownTimer = rangedCooldown;
+            if (inventory != null && inventory.HasAmmo())
+            {
+                SFXManager.Instance?.Play("attack_ranged");
+                anim.SetTrigger("AttackRanged");
+                rangedCooldownTimer = rangedCooldown;
+            }
+            else
+            {
+                Debug.Log("Sem lanches! Abra baús pra conseguir munição.");
+                // Opcional: som de "click vazio" pra feedback
+            }
         }
     }
 
@@ -137,6 +139,12 @@ public class PlayerMovement : MonoBehaviour
     public void Shoot()
     {
         if (hamburgerPrefab == null || firePoint == null) return;
+
+        // Consome munição
+        if (inventory != null)
+        {
+            if (!inventory.UseAmmo()) return; // segurança extra
+        }
 
         GameObject proj = Instantiate(hamburgerPrefab, firePoint.position, Quaternion.identity);
         Vector2 dir = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
@@ -167,14 +175,12 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Ladder"))
-            isOnLadder = true;
+        if (other.CompareTag("Ladder")) isOnLadder = true;
     }
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Ladder"))
-            isOnLadder = false;
+        if (other.CompareTag("Ladder")) isOnLadder = false;
     }
 
     void OnDrawGizmosSelected()

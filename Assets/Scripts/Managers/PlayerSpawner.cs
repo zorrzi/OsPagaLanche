@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerSpawner : MonoBehaviour
 {
@@ -56,5 +57,48 @@ public class PlayerSpawner : MonoBehaviour
         }
 
         Debug.Log($"Spawnou: {charData.characterName}");
+
+        // Restaura estado (vidas, chaves, munição) do GameData
+        StartCoroutine(RestoreStateNextFrame(playerInstance));
+    }
+
+    /// <summary>
+    /// Espera 1 frame pra que PlayerHealth/PlayerInventory inicializem,
+    /// depois aplica os dados salvos no GameData.
+    /// </summary>
+    IEnumerator RestoreStateNextFrame(GameObject playerInstance)
+    {
+        yield return null; // espera o Start dos componentes do player rodar
+
+        if (GameData.Instance == null) yield break;
+        if (!GameData.Instance.hasGameStarted) yield break;
+
+        PlayerHealth health = playerInstance.GetComponent<PlayerHealth>();
+        PlayerInventory inventory = playerInstance.GetComponent<PlayerInventory>();
+
+        // Restaura vidas
+        if (health != null && GameData.Instance.currentLives > 0)
+        {
+            health.currentLives = GameData.Instance.currentLives;
+            health.UpdateHeartsUI();
+            Debug.Log($"Vidas restauradas: {GameData.Instance.currentLives}");
+        }
+
+        // Restaura chaves
+        if (inventory != null && GameData.Instance.currentKeys > 0)
+        {
+            for (int i = 0; i < GameData.Instance.currentKeys; i++)
+            {
+                inventory.AddKey();
+            }
+            Debug.Log($"Chaves restauradas: {GameData.Instance.currentKeys}");
+        }
+
+        // Restaura munição (sem tocar som)
+        if (inventory != null && GameData.Instance.currentAmmo > 0)
+        {
+            inventory.SetAmmoSilent(GameData.Instance.currentAmmo);
+            Debug.Log($"Munição restaurada: {GameData.Instance.currentAmmo}");
+        }
     }
 }

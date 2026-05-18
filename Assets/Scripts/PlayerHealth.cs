@@ -60,11 +60,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isDead) return;
 
-        // Cheat de teste
         if (Input.GetKeyDown(KeyCode.H))
             TakeDamage();
 
-        // Detecta queda do mapa
         if (transform.position.y < fallDeathY)
         {
             Debug.Log("Caiu do mapa!");
@@ -135,21 +133,26 @@ public class PlayerHealth : MonoBehaviour
             rb.bodyType = RigidbodyType2D.Kinematic;
         }
 
-        // Salva o tempo atual + vidas e chaves NO ZERO (vai resetar ao respawnar)
-        if (GameData.Instance != null && LevelTimer.Instance != null)
+        // Decide o comportamento baseado na cena atual
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        if (GameData.Instance != null)
         {
-            // Salva tempo apenas se não for Fase1 (Fase1 reinicia tudo)
-            string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
-            if (currentScene != "Fase1")
+            if (currentScene == "Fase1")
             {
-                GameData.Instance.SaveStateBeforeLevelChange(3, 0, LevelTimer.Instance.CurrentTime);
-            }
-            else
-            {
-                // Na Fase1 reseta tudo
+                // Fase1: reseta TUDO (tempo, vidas, chaves, ammo)
                 GameData.Instance.accumulatedTime = 0f;
                 GameData.Instance.currentLives = 3;
                 GameData.Instance.currentKeys = 0;
+                GameData.Instance.currentAmmo = 0;
+                Debug.Log("Morreu na Fase1 — resetando tudo");
+            }
+            else
+            {
+                // Fase2/3: mantém TEMPO, reseta vidas (3), chaves (0) e ammo (0)
+                float currentTime = LevelTimer.Instance != null ? LevelTimer.Instance.CurrentTime : 0f;
+                GameData.Instance.SaveStateBeforeLevelChange(3, 0, currentTime, 0);
+                Debug.Log($"Morreu em {currentScene} — tempo preservado, vidas/chaves/ammo resetados");
             }
         }
 
@@ -160,16 +163,15 @@ public class PlayerHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(respawnDelay);
 
-        // Recarrega a cena ATUAL (não volta pra Fase1)
-        string currentScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        string currentScene = SceneManager.GetActiveScene().name;
 
         if (SceneFader.Instance != null)
             SceneFader.Instance.LoadSceneWithFade(currentScene);
         else
-            UnityEngine.SceneManagement.SceneManager.LoadScene(currentScene);
+            SceneManager.LoadScene(currentScene);
     }
 
-    void UpdateHeartsUI()
+    public void UpdateHeartsUI()
     {
         if (heart1 == null || heart2 == null || heart3 == null) return;
 
