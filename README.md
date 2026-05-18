@@ -35,7 +35,7 @@ Com base nas cenas, scripts e nomes dos assets, o projeto mistura referências d
 
 ### Objetivo do jogador
 
-Chegue ao fim das fases vivas(o), elimine os chefes quando necessário, toque a bandeira de saída e tente fechar a campanha com o menor tempo possível.
+Chegue ao fim das fases com vida, elimine os chefes quando necessário, toque a bandeira de saída e tente fechar a campanha com o menor tempo possível.
 
 ### Controles identificados no projeto
 
@@ -86,7 +86,7 @@ Também existe a cena `BOSS NHEIRO` no repositório. Pelo código atual, a entra
 | --- | --- | --- | --- | --- |
 | Props, vegetação, plataformas, baús, escadas e elementos visuais de cenário | `Assets/Cainos/Pixel Art Platformer - Village Props/` e derivados usados em partes de `Assets/Art/Objects/Swamp/` | Unity Asset Store — pacote **Pixel Art Platformer - Village Props** (`productId: 166114`, `packageVersion: 2.3.1`) | **Cainos** | **Unity Asset Store EULA** / `licenseType: Store` |
 | Editor auxiliar incluído junto ao pacote da Cainos | `Assets/Cainos/Third Party/Lucid Editor/` | GitHub — **Lucid Editor** | **Annulus Games** | **MIT** |
-| Tiles, fundos de caverna, objetos e sprites de monstro usados na ambientação de caverna | `Assets/Art/Objects/Cave/Cave Platformer Tileset/`, `Assets/Art/Backgrounds/Cave/`, `Assets/Art/Tilesets/Cave/` | Unity Asset Store — pacote **2D Platfrom Tile Set - Cave** (`productId: 61672`, `packageVersion: 1.2`) | **[lacuna: autor/publicador não aparece nos arquivos versionados]** | **Unity Asset Store EULA** / `licenseType: Store` |
+| Tiles, fundos de caverna, objetos e sprites de monstro usados na ambientação de caverna | `Assets/Art/Objects/Cave/Cave Platformer Tileset/`, `Assets/Art/Backgrounds/Cave/`, `Assets/Art/Tilesets/Cave/` | Unity Asset Store — pacote **2D Platform Tile Set - Cave** *(nos metadados locais aparece como `2D Platfrom Tile Set - Cave`)* (`productId: 61672`, `packageVersion: 1.2`) | **[lacuna: autor/publicador não aparece nos arquivos versionados]** | **Unity Asset Store EULA** / `licenseType: Store` |
 | UI / texto | `Assets/TextMesh Pro/` | Pacote oficial do ecossistema Unity (TextMesh Pro) | **Unity Technologies** | Licença padrão dos pacotes Unity / distribuição junto ao editor |
 
 ### Assets com autoria provável do projeto, mas sem crédito explícito no repositório
