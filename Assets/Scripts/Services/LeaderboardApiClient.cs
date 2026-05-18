@@ -33,10 +33,7 @@ public class LeaderboardApiClient : MonoBehaviour
 
     void Start()
     {
-        if (config == null)
-        {
-            config = Resources.Load<LeaderboardApiConfig>("LeaderboardApiConfig");
-        }
+        // No asset load: we rely on inline defaults when config is not assigned.
     }
 
     public void SubmitRun(string username, int durationSeconds, int score, Action<bool, string> callback = null)
@@ -162,19 +159,19 @@ public class LeaderboardApiClient : MonoBehaviour
 
     private string GetBaseUrl()
     {
-        if (config == null) return string.Empty;
+        if (config == null) return LeaderboardApiConfig.DefaultBaseUrl;
         return config.baseUrl != null ? config.baseUrl.Trim() : string.Empty;
     }
 
     private string GetApiKey()
     {
-        if (config == null) return string.Empty;
+        if (config == null) return LeaderboardApiConfig.DefaultApiKey;
         return config.apiKey != null ? config.apiKey.Trim() : string.Empty;
     }
 
     private int GetDefaultLimit()
     {
-        if (config == null || config.defaultLimit <= 0) return 50;
+        if (config == null || config.defaultLimit <= 0) return LeaderboardApiConfig.DefaultLimit;
         return config.defaultLimit;
     }
 }
