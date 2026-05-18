@@ -3,7 +3,6 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyHealth))]
 public class BossCoxinha : MonoBehaviour
 {
-
     [Header("Movimento")]
     public float speed = 2.5f;
     public float speedPhase2 = 4f;
@@ -180,9 +179,16 @@ public class BossCoxinha : MonoBehaviour
         if (tomatoPrefab == null || tomatoFirePoint == null) return;
 
         GameObject proj = Instantiate(tomatoPrefab, tomatoFirePoint.position, Quaternion.identity);
-        Projectile p = proj.GetComponent<Projectile>();
-        if (p != null)
-            p.forcedDirection = (player.position - tomatoFirePoint.position).normalized;
+
+        TomatoProjectile tomato = proj.GetComponent<TomatoProjectile>();
+        if (tomato != null)
+        {
+            tomato.Launch(player.position);
+        }
+        else
+        {
+            Debug.LogWarning("[BossCoxinha] Prefab do tomate não tem o componente TomatoProjectile!");
+        }
     }
 
     void SpawnSmoke()
@@ -198,8 +204,6 @@ public class BossCoxinha : MonoBehaviour
 
     private void OnBossDamaged(int currentHP, int maxHP)
     {
-        // Se o boss já morreu (este dano foi o fatal), não dispara o Hit
-        // para não interromper a animação de Death
         if (healthSystem.IsDead) return;
 
         anim.SetTrigger(HASH_HIT);
@@ -210,7 +214,6 @@ public class BossCoxinha : MonoBehaviour
 
     private void OnBossDeath()
     {
-        // Reseta o trigger de Hit para evitar que ele dispare logo após o Death
         anim.ResetTrigger(HASH_HIT);
         anim.SetTrigger(HASH_DEAD);
 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 757c32928e0b88743a0423798af60ace
+guid: 5fd470c6a27de6b4891b2709173f16bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -128875987210660355
-    second: Tomato_Frame6_0
+      213: -6201917169369464676
+    second: Oil_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tomato_Frame6_0
+      name: Oil_1_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 3
         y: 4
-        width: 57
-        height: 32
+        width: 91
+        height: 106
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df51b32f8f3263ef0800000000000000
-      internalID: -128875987210660355
+      spriteID: c904651913d5ee9a0800000000000000
+      internalID: -6201917169369464676
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tomato_Frame6_0: -128875987210660355
+      Oil_1_0: -6201917169369464676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
