@@ -14525,7 +14525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BossPizza
   speed: 2
   speedPhase2: 3.5
-  attackRange: 6
+  attackRange: 8
   detectionRange: 9
   pizzaSlicePrefab: {fileID: 5251152902164886533, guid: 6eb4e567cd62a47498d35cb0ad962422, type: 3}
   firePoint: {fileID: 1620171382}
