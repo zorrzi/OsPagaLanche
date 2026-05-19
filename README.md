@@ -102,6 +102,6 @@ Os scripts do jogo ficam em `Assets/Scripts`, organizados por responsabilidade:
 
 ### API de Leaderboard
 
-- (API de Leaderboard construída pelo time)[https://github.com/leonardoct3/paga-lanche-api]
-- (Documentação)[https://paga-lanche-api-production.up.railway.app/docs]
+- [API de Leaderboard construída pelo time](https://github.com/leonardoct3/paga-lanche-api)
+- [Documentação](https://paga-lanche-api-production.up.railway.app/docs)
 - Deploy feito no Railway para alta disponibilidade e com abertura para chamada via jogo
