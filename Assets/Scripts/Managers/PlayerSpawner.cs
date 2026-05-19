@@ -9,6 +9,7 @@ public class PlayerSpawner : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("PlayerSpawner.Start() executou!");
         SpawnPlayer();
     }
 
@@ -62,19 +63,28 @@ public class PlayerSpawner : MonoBehaviour
         StartCoroutine(RestoreStateNextFrame(playerInstance));
     }
 
-    /// <summary>
-    /// Espera 1 frame pra que PlayerHealth/PlayerInventory inicializem,
-    /// depois aplica os dados salvos no GameData.
-    /// </summary>
     IEnumerator RestoreStateNextFrame(GameObject playerInstance)
     {
-        yield return null; // espera o Start dos componentes do player rodar
+        yield return null;
 
-        if (GameData.Instance == null) yield break;
-        if (!GameData.Instance.hasGameStarted) yield break;
+        Debug.Log($"GameData.Instance é null? {GameData.Instance == null}");
+
+        if (GameData.Instance == null)
+        {
+            Debug.LogWarning("Saindo: GameData.Instance é null");
+            yield break;
+        }
+
+        Debug.Log($"hasGameStarted? {GameData.Instance.hasGameStarted}");
+        Debug.Log($"currentLives? {GameData.Instance.currentLives}");
+        Debug.Log($"currentKeys? {GameData.Instance.currentKeys}");
+        Debug.Log($"currentAmmo? {GameData.Instance.currentAmmo}");
+
 
         PlayerHealth health = playerInstance.GetComponent<PlayerHealth>();
         PlayerInventory inventory = playerInstance.GetComponent<PlayerInventory>();
+
+        Debug.Log($"health é null? {health == null} | inventory é null? {inventory == null}");
 
         // Restaura vidas
         if (health != null && GameData.Instance.currentLives > 0)
@@ -94,7 +104,7 @@ public class PlayerSpawner : MonoBehaviour
             Debug.Log($"Chaves restauradas: {GameData.Instance.currentKeys}");
         }
 
-        // Restaura munição (sem tocar som)
+        // Restaura munição
         if (inventory != null && GameData.Instance.currentAmmo > 0)
         {
             inventory.SetAmmoSilent(GameData.Instance.currentAmmo);

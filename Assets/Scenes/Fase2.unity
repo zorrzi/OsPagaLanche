@@ -75845,58 +75845,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 28ae4e85426a2f54a98737a016d4cbc2, type: 3}
---- !u!1 &600768444
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 600768446}
-  - component: {fileID: 600768445}
-  m_Layer: 0
-  m_Name: GameData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &600768445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600768444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d58f62492a7528c42a85e0ecdb2d395f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameData
-  playerName: 
-  selectedCharacterIndex: 3
-  lastLevelTime: 0
-  accumulatedTime: 0
-  currentLives: 3
-  currentKeys: 0
-  currentAmmo: 0
-  hasGameStarted: 0
---- !u!4 &600768446
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 600768444}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &613598640
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81386,7 +81334,6 @@ SceneRoots:
   - {fileID: 209259041}
   - {fileID: 1057278980}
   - {fileID: 599938693}
-  - {fileID: 600768446}
   - {fileID: 80569017}
   - {fileID: 1442205749}
   - {fileID: 1650903506}
