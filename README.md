@@ -79,7 +79,7 @@ As cenas principais do jogo são:
 | Elementos visuais do cenário de Cave | `Assets/Art/Objects/Cave/` | [🔗](https://assetstore.unity.com/packages/2d/environments/2d-platfrom-tile-set-cave-61672)  |
 | Cursores e ícones de interface | `Assets/Icons/IconPack/` | [🔗](https://shmorgus.itch.io/micro-icon-pack) |
 | Músicas de menu / seleção | `Assets/Audio/Music/main-menu-sound.mp3`, `Assets/Audio/Music/character-select-sound.mp3` | [🔗](https://uppbeat.io/zones/gaming?gad_source=1&gad_campaignid=20865019414&gclid=CjwKCAjw8arQBhB9EiwAfIKdQlAogRgSmynO-9GBSAs-2NKhZEC05OX9U1xiIRenrAOmFa0dZGozIRoCfBYQAvD_BwE) |
-| Efeitos sonoros de gameplay e UI | `Assets/Audio/SFX/` e `Assets/Audio/UI/` | [link da fonte] |
+| Efeitos sonoros de gameplay e UI | `Assets/Audio/SFX/` e `Assets/Audio/UI/` | [🔗](https://pixabay.com/music/search/melee/) + [🔗](https://mixkit.co/free-sound-effects/click/) |
 | Itens de comida | `Assets/Art/Food/` | [🔗](https://caramalgames.itch.io/american-food-pixel-art) |
 | Coração | `Assets/Art/Hearts/` | [🔗](https://loadedinreverse.itch.io/life-hearts-basic) |
 | Spikes | `Assets/Art/` | [🔗](https://omniclause.itch.io/spikes) |
