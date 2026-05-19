@@ -88,7 +88,7 @@ As cenas principais do jogo são:
 | Personagens jogáveis, retratos e animações | `Assets/Characters/Felipe/`, `Assets/Characters/Leonardo/`, `Assets/Characters/Marinheiro/`, `Assets/Characters/Zorzi/` | Auxílio de IA |
 | Backgrounds | `Assets/Backgrounds/` | Auxílio de IA |
 
-### Scripts do projeto
+## Arquitetura de Scripts do projeto
 
 Os scripts do jogo ficam em `Assets/Scripts`, organizados por responsabilidade:
 
