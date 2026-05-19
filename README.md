@@ -74,12 +74,12 @@ As cenas principais do jogo são:
 
 | Categoria | Caminho / uso no projeto | Fonte |
 | --- | --- | --- |
-| Props, vegetação, plataformas, baús, escadas e elementos visuais de cenário | `Assets/Cainos/Pixel Art Platformer - Village Props/` e derivados usados em partes de `Assets/Art/Objects/Swamp/` | [link da fonte] |
-| Tiles, fundos de caverna, objetos e sprites de monstro usados na ambientação de caverna | `Assets/Art/Objects/Cave/Cave Platformer Tileset/`, `Assets/Art/Backgrounds/Cave/`, `Assets/Art/Tilesets/Cave/` | [🔗](https://assetstore.unity.com/packages/2d/environments/2d-platfrom-tile-set-cave-61672) [🔗]([https://assetstore.unity.com/packages/2d/environments/2d-platfrom-tile-set-cave-61672](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi1rNzLpsSUAxWRjpUCHXo0E8YQFnoECBwQAQ&url=https%3A%2F%2Fassetstore.unity.com%2Fpackages%2F2d%2Fenvironments%2Fpixel-art-platformer-village-props-166114%3Fsrsltid%3DAfmBOoqjeql2u5pOBVRLkw24irkH0mSqovIcZPmev9JdzKEt3sZw7HRK&usg=AOvVaw109y5nao9JlpF1s0KQ6nfJ&cshid=1779157867173866&opi=89978449))  |
-| Vozes dos personagens na seleção | `Assets/Audio/Voices/Felipe/`, `Assets/Audio/Voices/Leo/`, `Assets/Audio/Voices/Marinheiro/`, `Assets/Audio/Voices/Zorzi/` | [link da fonte] |
-| Inimigos e bosses | `Assets/Art/Enemys/` | [link da fonte] |
-| Cursores e ícones de interface | `Assets/Icons/IconPack/` | [link da fonte] |
-| Músicas de menu / seleção | `Assets/Audio/Music/main-menu-sound.mp3`, `Assets/Audio/Music/character-select-sound.mp3` | [link da fonte] |
+| Props, vegetação, plataformas, baús, escadas e elementos visuais de cenário | `Assets/Cainos/Pixel Art Platformer - Village Props/` e derivados usados em partes de `Assets/Art/Objects/Swamp/` | [🔗]([https://assetstore.unity.com/packages/2d/environments/2d-platfrom-tile-set-cave-61672](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi1rNzLpsSUAxWRjpUCHXo0E8YQFnoECBwQAQ&url=https%3A%2F%2Fassetstore.unity.com%2Fpackages%2F2d%2Fenvironments%2Fpixel-art-platformer-village-props-166114%3Fsrsltid%3DAfmBOoqjeql2u5pOBVRLkw24irkH0mSqovIcZPmev9JdzKEt3sZw7HRK&usg=AOvVaw109y5nao9JlpF1s0KQ6nfJ&cshid=1779157867173866&opi=89978449)) |
+| Tiles, fundos de caverna, objetos e sprites de monstro usados na ambientação de caverna | `Assets/Art/Objects/Cave/Cave Platformer Tileset/`, `Assets/Art/Backgrounds/Cave/`, `Assets/Art/Tilesets/Cave/` | [🔗](https://assetstore.unity.com/packages/2d/environments/2d-platfrom-tile-set-cave-61672)  |
+| Vozes dos personagens na seleção | `Assets/Audio/Voices/Felipe/`, `Assets/Audio/Voices/Leo/`, `Assets/Audio/Voices/Marinheiro/`, `Assets/Audio/Voices/Zorzi/` | Auxílio de IA |
+| Inimigos e bosses | `Assets/Art/Enemys/` | Auxílio de IA |
+| Cursores e ícones de interface | `Assets/Icons/IconPack/` | Auxílio de IA |
+| Músicas de menu / seleção | `Assets/Audio/Music/main-menu-sound.mp3`, `Assets/Audio/Music/character-select-sound.mp3` | [link da fonte](https://uppbeat.io/zones/gaming?gad_source=1&gad_campaignid=20865019414&gclid=CjwKCAjw8arQBhB9EiwAfIKdQlAogRgSmynO-9GBSAs-2NKhZEC05OX9U1xiIRenrAOmFa0dZGozIRoCfBYQAvD_BwE) |
 | Efeitos sonoros de gameplay e UI | `Assets/Audio/SFX/` e `Assets/Audio/UI/` | [link da fonte] |
 | Personagens jogáveis, retratos e animações | `Assets/Characters/Felipe/`, `Assets/Characters/Leonardo/`, `Assets/Characters/Marinheiro/`, `Assets/Characters/Zorzi/` | Auxílio de IA |
 | Backgrounds | `Assets/Backgrounds/` | Auxílio de IA |
