@@ -73715,6 +73715,52 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &104830158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 104830160}
+  - component: {fileID: 104830159}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &104830159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104830158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a796d540f5c6d8459514cbd330f07f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicManager
+  musicVolume: 0.15
+  fadeDuration: 1
+--- !u!4 &104830160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104830158}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 434.77396, y: 272.49472, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &106151536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77305,7 +77351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b136357137a6af49bc765579b6cbd19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneMusic
-  music: {fileID: 0}
+  music: {fileID: 8300000, guid: aef3d38235f9eb14898d936bebea969f, type: 3}
 --- !u!4 &1105011970
 Transform:
   m_ObjectHideFlags: 0
@@ -81346,6 +81392,7 @@ SceneRoots:
   - {fileID: 1650903506}
   - {fileID: 1408168677}
   - {fileID: 1105011970}
+  - {fileID: 104830160}
   - {fileID: 1054704661}
   - {fileID: 1783149513}
   - {fileID: 1263064256}
