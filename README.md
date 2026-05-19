@@ -87,4 +87,12 @@ As cenas principais do jogo são:
 
 ### Scripts do projeto
 
-- `Assets/Scripts`
+Os scripts do jogo ficam em `Assets/Scripts`, organizados por responsabilidade:
+
+- `Enemies/`: inimigos, bosses e projéteis.
+- `Items/`: itens coletáveis específicos.
+- `Managers/`: fluxo global da campanha, áudio, timer e seleção de personagem.
+- `Services/`: integração com serviços externos, como leaderboard.
+- `Triggers/`: gatilhos de fase, tutorial e progressão.
+- `UI/`: HUD, menus e telas de interface.
+- raiz de `Assets/Scripts/`: scripts centrais de gameplay, câmera, pausa, vida e inventário.
