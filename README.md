@@ -21,7 +21,7 @@ O fluxo principal do jogo é:
 - **Coleta de chaves, baús e corações**, ajudando na progressão e na recuperação de vida.
 - **Lanches finitos saindo dos baús**, adicionando recursos extras durante a partida.
 - **Chefes temáticos** (como pizza, coxinha e food truck), reforçando a identidade cômica do projeto.
-- **Leaderboard por tempo**, incentivando terminar a campanha rapidamente.
+- **Leaderboard por tempo**, incentivando terminar a campanha rapidamente. 
 
 ### Inspiração do projeto
 
@@ -99,3 +99,9 @@ Os scripts do jogo ficam em `Assets/Scripts`, organizados por responsabilidade:
 - `Triggers/`: gatilhos de fase, tutorial e progressão.
 - `UI/`: HUD, menus e telas de interface.
 - raiz de `Assets/Scripts/`: scripts centrais de gameplay, câmera, pausa, vida e inventário.
+
+### API de Leaderboard
+
+- (API de Leaderboard construída pelo time)[https://github.com/leonardoct3/paga-lanche-api]
+- (Documentação)[https://paga-lanche-api-production.up.railway.app/docs]
+- Deploy feito no Railway para alta disponibilidade e com abertura para chamada via jogo
