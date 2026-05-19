@@ -75,16 +75,15 @@ As cenas principais do jogo são:
 | Categoria | Caminho / uso no projeto | Fonte |
 | --- | --- | --- |
 | Props, vegetação, plataformas, baús, escadas e elementos visuais de cenário | `Assets/Cainos/Pixel Art Platformer - Village Props/` e derivados usados em partes de `Assets/Art/Objects/Swamp/` | [link da fonte] |
-| Editor auxiliar incluído junto ao pacote da Cainos | `Assets/Cainos/Third Party/Lucid Editor/` | [link da fonte] |
 | Tiles, fundos de caverna, objetos e sprites de monstro usados na ambientação de caverna | `Assets/Art/Objects/Cave/Cave Platformer Tileset/`, `Assets/Art/Backgrounds/Cave/`, `Assets/Art/Tilesets/Cave/` | [🔗](https://assetstore.unity.com/packages/2d/environments/2d-platfrom-tile-set-cave-61672) |
-| Personagens jogáveis, retratos e animações | `Assets/Characters/Felipe/`, `Assets/Characters/Leonardo/`, `Assets/Characters/Marinheiro/`, `Assets/Characters/Zorzi/` | Auxílio de IA |
 | Vozes dos personagens na seleção | `Assets/Audio/Voices/Felipe/`, `Assets/Audio/Voices/Leo/`, `Assets/Audio/Voices/Marinheiro/`, `Assets/Audio/Voices/Zorzi/` | [link da fonte] |
 | Inimigos e bosses | `Assets/Art/Enemys/` | [link da fonte] |
-| Backgrounds | `Assets/Backgrounds/` | Auxílio de IA |
-| Itens de comida e corações | `Assets/Art/Food/`, `Assets/Art/Hearts/` | Auxílio de IA |
 | Cursores e ícones de interface | `Assets/Icons/IconPack/` | [link da fonte] |
 | Músicas de menu / seleção | `Assets/Audio/Music/main-menu-sound.mp3`, `Assets/Audio/Music/character-select-sound.mp3` | [link da fonte] |
 | Efeitos sonoros de gameplay e UI | `Assets/Audio/SFX/` e `Assets/Audio/UI/` | [link da fonte] |
+| Personagens jogáveis, retratos e animações | `Assets/Characters/Felipe/`, `Assets/Characters/Leonardo/`, `Assets/Characters/Marinheiro/`, `Assets/Characters/Zorzi/` | Auxílio de IA |
+| Backgrounds | `Assets/Backgrounds/` | Auxílio de IA |
+| Itens de comida e corações | `Assets/Art/Food/`, `Assets/Art/Hearts/` | Auxílio de IA |
 
 ### Scripts do projeto
 
