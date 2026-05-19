@@ -74360,6 +74360,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1063013025}
     m_Modifications:
+    - target: {fileID: 1575352486387985184, guid: 260f92a50b25ca74789c7b3fe9db3740, type: 3}
+      propertyPath: ammoValuePerPickup
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2329743375068436896, guid: 260f92a50b25ca74789c7b3fe9db3740, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19
@@ -74484,6 +74488,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1063013025}
     m_Modifications:
+    - target: {fileID: 1575352486387985184, guid: 260f92a50b25ca74789c7b3fe9db3740, type: 3}
+      propertyPath: ammoValuePerPickup
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2329743375068436896, guid: 260f92a50b25ca74789c7b3fe9db3740, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9
@@ -79236,6 +79244,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1063013025}
     m_Modifications:
+    - target: {fileID: 1575352486387985184, guid: 260f92a50b25ca74789c7b3fe9db3740, type: 3}
+      propertyPath: ammoValuePerPickup
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2329743375068436896, guid: 260f92a50b25ca74789c7b3fe9db3740, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.7
@@ -79786,6 +79798,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1063013025}
     m_Modifications:
+    - target: {fileID: 1575352486387985184, guid: 260f92a50b25ca74789c7b3fe9db3740, type: 3}
+      propertyPath: ammoValuePerPickup
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 2329743375068436896, guid: 260f92a50b25ca74789c7b3fe9db3740, type: 3}
       propertyPath: m_LocalPosition.x
       value: 59
