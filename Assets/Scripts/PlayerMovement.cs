@@ -24,6 +24,22 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask enemyLayer;
     public KeyCode meleeKey = KeyCode.J;
 
+    // ---------------- MOBILE ----------------
+    // Input de TOUCH (escrito pelos botoes da tela via TouchControlsBridge).
+    // Separado do teclado para nao haver sobrescrita.
+    private float touchH = 0f;
+    private float touchV = 0f;
+
+    // Input "final" que o resto do codigo le. Combinacao de teclado + touch.
+    private float horizontalInput = 0f;
+    private float verticalInput = 0f;
+
+    // Botoes de acao (event-based, padrao OR-like, nao sao sobrescritos).
+    private bool jumpButtonDown = false;
+    private bool meleeButtonDown = false;
+    private bool rangedButtonDown = false;
+    // ----------------------------------------
+
     private float coyoteTimeCounter = 0f;
     private float rangedCooldownTimer = 0f;
     private float meleeCooldownTimer = 0f;
@@ -43,8 +59,31 @@ public class PlayerMovement : MonoBehaviour
         inventory = GetComponent<PlayerInventory>();
     }
 
+    // ---------------- API publica chamada pelos botoes touch via Bridge ----------------
+    public void SetHorizontal(float value) => touchH = value;
+    public void SetVertical(float value) => touchV = value;
+    public void PressJump() => jumpButtonDown = true;
+    public void PressMelee() => meleeButtonDown = true;
+    public void PressRanged() => rangedButtonDown = true;
+    // -----------------------------------------------------------------------------------
+
     void Update()
     {
+        // ---------- Combinar teclado (Editor/PC) + touch (Mobile) ----------
+        float kbH = 0f, kbV = 0f;
+#if UNITY_EDITOR || UNITY_STANDALONE
+        kbH = Input.GetAxisRaw("Horizontal");
+        kbV = Input.GetAxisRaw("Vertical");
+        if (Input.GetKeyDown(KeyCode.Space)) jumpButtonDown = true;
+        if (Input.GetKeyDown(meleeKey)) meleeButtonDown = true;
+        if (Input.GetKeyDown(rangedKey)) rangedButtonDown = true;
+#endif
+        // Teclado tem prioridade quando pressionado, senao usa o touch.
+        // Assim os botoes da tela NAO sao sobrescritos pelo teclado parado.
+        horizontalInput = Mathf.Abs(kbH) > 0.01f ? kbH : touchH;
+        verticalInput = Mathf.Abs(kbV) > 0.01f ? kbV : touchV;
+        // -------------------------------------------------------------------
+
         // GROUND CHECK
         CapsuleCollider2D col = GetComponent<CapsuleCollider2D>();
         Vector2 origin = (Vector2)transform.position + col.offset + Vector2.down * (col.size.y / 2);
@@ -69,7 +108,7 @@ public class PlayerMovement : MonoBehaviour
         if (meleeCooldownTimer > 0f) meleeCooldownTimer -= Time.deltaTime;
 
         // INPUT MOVIMENTO
-        float moveInput = Input.GetAxisRaw("Horizontal");
+        float moveInput = horizontalInput;
         movementVel.x = moveInput * speed;
 
         if (moveInput != 0)
@@ -80,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("IsClimbing", isOnLadder);
 
         // PULO
-        if (Input.GetKeyDown(KeyCode.Space) && (coyoteTimeCounter > 0f || isOnLadder))
+        if (jumpButtonDown && (coyoteTimeCounter > 0f || isOnLadder))
         {
             SFXManager.Instance?.Play("jump");
             jumpRequested = true;
@@ -91,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
         // ESCADA
         if (isOnLadder)
         {
-            float climbInput = Input.GetAxisRaw("Vertical");
+            float climbInput = verticalInput;
             movementVel.y = climbInput * climbSpeed;
         }
         else
@@ -100,15 +139,15 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // ATAQUE MELEE
-        if (Input.GetKeyDown(meleeKey) && meleeCooldownTimer <= 0f)
+        if (meleeButtonDown && meleeCooldownTimer <= 0f)
         {
             SFXManager.Instance?.Play("attack_melee");
             anim.SetTrigger("AttackMelee");
             meleeCooldownTimer = meleeCooldown;
         }
 
-        // ATAQUE RANGED � s� se tiver muni��o
-        if (Input.GetKeyDown(rangedKey) && rangedCooldownTimer <= 0f)
+        // ATAQUE RANGED - so se tiver municao
+        if (rangedButtonDown && rangedCooldownTimer <= 0f)
         {
             if (inventory != null && inventory.HasAmmo())
             {
@@ -118,10 +157,16 @@ public class PlayerMovement : MonoBehaviour
             }
             else
             {
-                Debug.Log("Sem lanches! Abra ba�s pra conseguir muni��o.");
-                // Opcional: som de "click vazio" pra feedback
+#if UNITY_EDITOR
+                Debug.Log("Sem lanches! Abra baus pra conseguir municao.");
+#endif
             }
         }
+
+        // Consome os "botoes apertados" (1 frame, igual GetKeyDown)
+        jumpButtonDown = false;
+        meleeButtonDown = false;
+        rangedButtonDown = false;
     }
 
     private void FixedUpdate()
@@ -140,10 +185,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (hamburgerPrefab == null || firePoint == null) return;
 
-        // Consome muni��o
         if (inventory != null)
         {
-            if (!inventory.UseAmmo()) return; // seguran�a extra
+            if (!inventory.UseAmmo()) return;
         }
 
         GameObject proj = Instantiate(hamburgerPrefab, firePoint.position, Quaternion.identity);

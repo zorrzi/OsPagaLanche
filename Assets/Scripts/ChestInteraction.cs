@@ -18,6 +18,9 @@ public class ChestInteraction : MonoBehaviour
     private bool isOpen = false;
     private bool playerNearby = false;
 
+    private bool interactButtonDown = false;
+    public void PressInteract() => interactButtonDown = true;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -25,10 +28,18 @@ public class ChestInteraction : MonoBehaviour
 
     void Update()
     {
-        if (playerNearby && Input.GetKeyDown(KeyCode.E) && !isOpen)
+        bool pressed = interactButtonDown;
+#if UNITY_EDITOR || UNITY_STANDALONE
+        if (Input.GetKeyDown(KeyCode.E)) pressed = true;
+#endif
+
+        if (playerNearby && pressed && !isOpen)
         {
             TryOpenChest();
         }
+
+        // Consome o flag (verdadeiro por 1 frame, igual GetKeyDown)
+        interactButtonDown = false;
     }
 
     void TryOpenChest()
@@ -40,7 +51,9 @@ public class ChestInteraction : MonoBehaviour
         {
             isOpen = true;
             animator.SetBool("IsOpen", true);
-            Debug.Log($"Baú aberto! Lanche vale {ammoValuePerPickup} munições");
+#if UNITY_EDITOR
+            Debug.Log($"Bau aberto! Lanche vale {ammoValuePerPickup} municoes");
+#endif
 
             SFXManager.Instance?.Play("chest_open");
 
@@ -49,7 +62,9 @@ public class ChestInteraction : MonoBehaviour
         }
         else
         {
-            Debug.Log("Você precisa de uma chave!");
+#if UNITY_EDITOR
+            Debug.Log("Voce precisa de uma chave!");
+#endif
         }
     }
 
@@ -65,19 +80,17 @@ public class ChestInteraction : MonoBehaviour
     {
         if (hamburgerPickupPrefab == null)
         {
-            Debug.LogWarning("hamburgerPickupPrefab não atribuído no baú!");
+            Debug.LogWarning("hamburgerPickupPrefab nao atribuido no bau!");
             return;
         }
 
         Vector3 spawnPos = transform.position + new Vector3(0, 0.5f, 0);
         GameObject pickup = Instantiate(hamburgerPickupPrefab, spawnPos, Quaternion.identity);
 
-        // Configura quanto vale esse lanche
         HamburgerPickup pickupScript = pickup.GetComponent<HamburgerPickup>();
         if (pickupScript != null)
             pickupScript.ammoValue = ammoValuePerPickup;
 
-        // Aplica força aleatória pra "pular" do baú
         Rigidbody2D rb = pickup.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
